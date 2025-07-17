@@ -13,7 +13,7 @@
 
 ## 演示
 
-![](pics\image-20250717171136936.png)
+![](https://github.com/coperlm/NDSS-filter/blob/main/pics/image-20250717171136936.png)
 
 ## 🚀 快速开始
 
