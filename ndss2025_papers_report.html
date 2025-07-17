@@ -1,0 +1,1866 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NDSS Symposium 2025 已录用论文列表</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+        
+        .stats {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+        
+        .stat-item {
+            flex: 1;
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .paper-list {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .paper-item {
+            padding: 25px;
+            border-bottom: 1px solid #eee;
+            transition: background-color 0.3s ease;
+        }
+        
+        .paper-item:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .paper-item:last-child {
+            border-bottom: none;
+        }
+        
+        .paper-number {
+            color: #666;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .paper-title-en {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        
+        .paper-title-zh {
+            font-size: 1.1em;
+            color: #e74c3c;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        
+        .paper-authors {
+            color: #666;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+        
+        .paper-url {
+            margin-top: 10px;
+        }
+        
+        .paper-url a {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        
+        .paper-url a:hover {
+            text-decoration: underline;
+        }
+        
+        .search-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .no-results {
+            text-align: center;
+            color: #666;
+            padding: 40px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>NDSS Symposium 2025</h1>
+        <p>Network and Distributed System Security Symposium</p>
+        <p>已录用论文列表 (中英文对照)</p>
+    </div>
+    
+    <div class="stats">
+        <div class="stat-item">
+            <div class="stat-number">207</div>
+            <div>论文总数</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">154</div>
+            <div>有链接的论文</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">207</div>
+            <div>已翻译论文</div>
+        </div>
+    </div>
+    
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="搜索论文标题、作者或关键词..." onkeyup="searchPapers()">
+    </div>
+    
+    <div class="paper-list" id="paperList">
+
+        <div class="paper-item" data-search="a key-driven framework for identity-preserving face anonymization 一个钥匙驱动的框架，用于识别面部匿名化 miaomiao wang (shanghai university), guang hua (singapore institute of technology), sheng li (fudan university),...">
+            <div class="paper-number">#1</div>
+            <div class="paper-title-en">A Key-Driven Framework for Identity-Preserving Face Anonymization</div>
+            <div class="paper-title-zh">一个钥匙驱动的框架，用于识别面部匿名化</div>
+            <div class="paper-authors"><strong>作者:</strong> Miaomiao Wang (Shanghai University), Guang Hua (Singapore Institute of Technology), Sheng Li (Fudan University),...</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="a method to facilitate membership inference attacks in 一种促进会员推理攻击的方法 zitao chen (university of british columbia), karthik pattabiraman (university of british columbia)zitao chen">
+            <div class="paper-number">#2</div>
+            <div class="paper-title-en">A Method to Facilitate Membership Inference Attacks in</div>
+            <div class="paper-title-zh">一种促进会员推理攻击的方法</div>
+            <div class="paper-authors"><strong>作者:</strong> Zitao Chen (University of British Columbia), Karthik Pattabiraman (University of British Columbia)Zitao Chen</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/a-method-to-facilitate-membership-inference-attacks-in-deep-learning-models/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="a systematic evaluation of novel and existing cache 对新颖和现有缓存的系统评估 fabian rauscher (graz university of technology), carina fiedler (graz university of technology), andreas kogler...fabian rauscher">
+            <div class="paper-number">#3</div>
+            <div class="paper-title-en">A Systematic Evaluation of Novel and Existing Cache</div>
+            <div class="paper-title-zh">对新颖和现有缓存的系统评估</div>
+            <div class="paper-authors"><strong>作者:</strong> Fabian Rauscher (Graz University of Technology), Carina Fiedler (Graz University of Technology), Andreas Kogler...Fabian Rauscher</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="alphadog: no-box camouflage attacks via alpha channel oversight alphadog：通过alpha频道监督的无箱伪装攻击 qi xia (university of texas at san antonio), qian chen (university of texas at...qi xia">
+            <div class="paper-number">#4</div>
+            <div class="paper-title-en">AlphaDog: No-Box Camouflage Attacks via Alpha Channel Oversight</div>
+            <div class="paper-title-zh">Alphadog：通过Alpha频道监督的无箱伪装攻击</div>
+            <div class="paper-authors"><strong>作者:</strong> Qi Xia (University of Texas at San Antonio), Qian Chen (University of Texas at...Qi Xia</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="an empirical study on fingerprint api misuse with 关于指纹api滥用的实证研究 xin zhang (fudan university), xiaohan zhang (fudan university), zhichen liu (fudan university), bo zhao...">
+            <div class="paper-number">#5</div>
+            <div class="paper-title-en">An Empirical Study on Fingerprint API Misuse with</div>
+            <div class="paper-title-zh">关于指纹API滥用的实证研究</div>
+            <div class="paper-authors"><strong>作者:</strong> Xin Zhang (Fudan University), Xiaohan Zhang (Fudan University), Zhichen Liu (Fudan University), Bo Zhao...</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/an-empirical-study-on-fingerprint-api-misuse-with-lifecycle-analysis-in-real-world-android-apps/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="automated expansion of privacy data taxonomy for compliant 合规性的隐私数据分类法的自动扩展 yue qin (indiana university bloomington &amp; central university of finance and economics), yue xiao...">
+            <div class="paper-number">#6</div>
+            <div class="paper-title-en">Automated Expansion of Privacy Data Taxonomy for Compliant</div>
+            <div class="paper-title-zh">合规性的隐私数据分类法的自动扩展</div>
+            <div class="paper-authors"><strong>作者:</strong> Yue Qin (Indiana University Bloomington &amp; Central University of Finance and Economics), Yue Xiao...</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/automated-expansion-of-privacy-data-taxonomy-for-compliant-data-breach-notification/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="be careful of what you embed: demystifying ole 小心您嵌入的内容：神秘面纱 yunpeng tian (huazhong university of science and technology), feng dong (huazhong university of science...yunpeng tian">
+            <div class="paper-number">#7</div>
+            <div class="paper-title-en">Be Careful of What You Embed: Demystifying OLE</div>
+            <div class="paper-title-zh">小心您嵌入的内容：神秘面纱</div>
+            <div class="paper-authors"><strong>作者:</strong> Yunpeng Tian (Huazhong University of Science and Technology), Feng Dong (Huazhong University of Science...Yunpeng Tian</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="black-box membership inference attacks against fine-tuned diffusion models 黑盒会员资格推理攻击针对微调扩散模型 yan pang (university of virginia), tianhao wang (university of virginia)yan pang">
+            <div class="paper-number">#8</div>
+            <div class="paper-title-en">Black-box Membership Inference Attacks against Fine-tuned Diffusion Models</div>
+            <div class="paper-title-zh">黑盒会员资格推理攻击针对微调扩散模型</div>
+            <div class="paper-authors"><strong>作者:</strong> Yan Pang (University of Virginia), Tianhao Wang (University of Virginia)Yan Pang</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/black-box-membership-inference-attacks-against-fine-tuned-diffusion-models/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="bulkhead: secure, scalable, and efficient kernel compartmentalization with 舱壁：安全，可扩展和高效的内核分隔 yinggang guo (state key laboratory for novel software technology, nanjing university; university of minnesota),...é">
+            <div class="paper-number">#9</div>
+            <div class="paper-title-en">BULKHEAD: Secure, Scalable, and Efficient Kernel Compartmentalization with</div>
+            <div class="paper-title-zh">舱壁：安全，可扩展和高效的内核分隔</div>
+            <div class="paper-authors"><strong>作者:</strong> Yinggang Guo (State Key Laboratory for Novel Software Technology, Nanjing University; University of Minnesota),...é</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/bulkhead-secure-scalable-and-efficient-kernel-compartmentalization-with-pks/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="bumblebee: secure two-party inference framework for large transformers bumblebee: secure two-party inference framework for large transformers wen-jie lu (ant group), zhicong huang (ant group), zhen gu (alibaba group), jingyu li...æ">
+            <div class="paper-number">#10</div>
+            <div class="paper-title-en">BumbleBee: Secure Two-party Inference Framework for Large Transformers</div>
+            <div class="paper-title-zh">BumbleBee: Secure Two-party Inference Framework for Large Transformers</div>
+            <div class="paper-authors"><strong>作者:</strong> Wen-jie Lu (Ant Group), Zhicong Huang (Ant Group), Zhen Gu (Alibaba Group), Jingyu Li...æ</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/bumblebee-secure-two-party-inference-framework-for-large-transformers/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="careful about what app promotion ads recommend! detecting 谨慎促销广告推荐什么！检测 shang ma (university of notre dame), chaoran chen (university of notre dame), shao yang...">
+            <div class="paper-number">#11</div>
+            <div class="paper-title-en">Careful About What App Promotion Ads Recommend! Detecting</div>
+            <div class="paper-title-zh">谨慎促销广告推荐什么！检测</div>
+            <div class="paper-authors"><strong>作者:</strong> Shang Ma (University of Notre Dame), Chaoran Chen (University of Notre Dame), Shao Yang...</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/careful-about-what-app-promotion-ads-recommend-detecting-and-explaining-malware-promotion-via-app-promotion-graph/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="cascading spy sheets: exploiting the complexity of modern 级联间谍床单：利用现代的复杂性 leon trampert (cispa helmholtz center for information security), daniel weber (cispa helmholtz center for...leon trampert">
+            <div class="paper-number">#12</div>
+            <div class="paper-title-en">Cascading Spy Sheets: Exploiting the Complexity of Modern</div>
+            <div class="paper-title-zh">级联间谍床单：利用现代的复杂性</div>
+            <div class="paper-authors"><strong>作者:</strong> Leon Trampert (CISPA Helmholtz Center for Information Security), Daniel Weber (CISPA Helmholtz Center for...Leon Trampert</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/cascading-spy-sheets-exploiting-the-complexity-of-modern-css-for-email-and-browser-fingerprinting/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="censor: defense against gradient inversion via orthogonal subspace 审查员：防御梯度反转通过正交子空间 kaiyuan zhang (purdue university), siyuan cheng (purdue university), guangyu shen (purdue university), bruno ribeiro...kaiyuan zhang">
+            <div class="paper-number">#13</div>
+            <div class="paper-title-en">CENSOR: Defense Against Gradient Inversion via Orthogonal Subspace</div>
+            <div class="paper-title-zh">审查员：防御梯度反转通过正交子空间</div>
+            <div class="paper-authors"><strong>作者:</strong> Kaiyuan Zhang (Purdue University), Siyuan Cheng (Purdue University), Guangyu Shen (Purdue University), Bruno Ribeiro...Kaiyuan Zhang</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/censor-defense-against-gradient-inversion-via-orthogonal-subspace-bayesian-sampling/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="chaos: exploiting station time synchronization in 802.11 networks 混乱：在802.11网络中利用电台时间同步 sirus shahini (university of utah), robert ricci (university of utah)sirus shahini">
+            <div class="paper-number">#14</div>
+            <div class="paper-title-en">CHAOS: Exploiting Station Time Synchronization in 802.11 Networks</div>
+            <div class="paper-title-zh">混乱：在802.11网络中利用电台时间同步</div>
+            <div class="paper-authors"><strong>作者:</strong> Sirus Shahini (University of Utah), Robert Ricci (University of Utah)Sirus Shahini</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="clibe: detecting dynamic backdoors in transformer-based nlp models clibe：在基于变压器的nlp模型中检测动态后门 rui zeng (zhejiang university), xi chen (zhejiang university), yuwen pu (zhejiang university), xuhong zhang...æ">
+            <div class="paper-number">#15</div>
+            <div class="paper-title-en">CLIBE: Detecting Dynamic Backdoors in Transformer-based NLP Models</div>
+            <div class="paper-title-zh">clibe：在基于变压器的NLP模型中检测动态后门</div>
+            <div class="paper-authors"><strong>作者:</strong> Rui Zeng (Zhejiang University), Xi Chen (Zhejiang University), Yuwen Pu (Zhejiang University), Xuhong Zhang...æ</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="compiled models, built-in exploits: uncovering pervasive bit-flip attack 编译的型号，内置利用：揭示普遍的位叶片攻击 yanzuo chen (the hong kong university of science and technology), zhibo liu (the hong...é">
+            <div class="paper-number">#16</div>
+            <div class="paper-title-en">Compiled Models, Built-In Exploits: Uncovering Pervasive Bit-Flip Attack</div>
+            <div class="paper-title-zh">编译的型号，内置利用：揭示普遍的位叶片攻击</div>
+            <div class="paper-authors"><strong>作者:</strong> Yanzuo Chen (The Hong Kong University of Science and Technology), Zhibo Liu (The Hong...é</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/compiled-models-built-in-exploits-uncovering-pervasive-bit-flip-attack-surfaces-in-dnn-executables/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="cross-origin web attacks via http/2 server push and 通过http/2服务器推送的交叉原始web攻击 pinji chen (tsinghua university), jianjun chen (tsinghua university &amp; zhongguancun laboratory), mingming zhang (zhongguancun...é">
+            <div class="paper-number">#17</div>
+            <div class="paper-title-en">Cross-Origin Web Attacks via HTTP/2 Server Push and</div>
+            <div class="paper-title-zh">通过HTTP/2服务器推送的交叉原始Web攻击</div>
+            <div class="paper-authors"><strong>作者:</strong> Pinji Chen (Tsinghua University), Jianjun Chen (Tsinghua University &amp; Zhongguancun Laboratory), Mingming Zhang (Zhongguancun...é</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/cross-origin-web-attacks-via-http-2-server-push-and-signed-http-exchange/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="delay-allowed differentially private data stream release 延迟允许差异私有数据流发布 xiaochen li (university of virginia), zhan qin (zhejiang university), kui ren (zhejiang university), chen...æ">
+            <div class="paper-number">#18</div>
+            <div class="paper-title-en">Delay-allowed Differentially Private Data Stream Release</div>
+            <div class="paper-title-zh">延迟允许差异私有数据流发布</div>
+            <div class="paper-authors"><strong>作者:</strong> Xiaochen Li (University of Virginia), Zhan Qin (Zhejiang University), Kui Ren (Zhejiang University), Chen...æ</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="diffence: fencing membership privacy with diffusion models 防御：通过扩散模型击剑会员隐私 yuefeng peng (university of massachusetts amherst), ali naseh (university of massachusetts amherst), amir houmansadr...yuefeng peng">
+            <div class="paper-number">#19</div>
+            <div class="paper-title-en">Diffence: Fencing Membership Privacy With Diffusion Models</div>
+            <div class="paper-title-zh">防御：通过扩散模型击剑会员隐私</div>
+            <div class="paper-authors"><strong>作者:</strong> Yuefeng Peng (University of Massachusetts Amherst), Ali Naseh (University of Massachusetts Amherst), Amir Houmansadr...Yuefeng Peng</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="dissecting payload-based transaction phishing on ethereum 在以太坊上解剖基于有效载荷的交易网络钓鱼 zhuo chen (zhejiang university), yufeng hu (zhejiang university), bowen he (zhejiang university), dong luo...é">
+            <div class="paper-number">#20</div>
+            <div class="paper-title-en">Dissecting Payload-based Transaction Phishing on Ethereum</div>
+            <div class="paper-title-zh">在以太坊上解剖基于有效载荷的交易网络钓鱼</div>
+            <div class="paper-authors"><strong>作者:</strong> Zhuo Chen (Zhejiang University), Yufeng Hu (Zhejiang University), Bowen He (Zhejiang University), Dong Luo...é</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="duumviri: detecting trackers and mixed trackers with a duumviri：用a检测跟踪器和混合跟踪器 he shuang (university of toronto), lianying zhao (carleton university and university of toronto), david...he shuang">
+            <div class="paper-number">#21</div>
+            <div class="paper-title-en">Duumviri: Detecting Trackers and Mixed Trackers with a</div>
+            <div class="paper-title-zh">Duumviri：用A检测跟踪器和混合跟踪器</div>
+            <div class="paper-authors"><strong>作者:</strong> He Shuang (University of Toronto), Lianying Zhao (Carleton University and University of Toronto), David...He Shuang</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/duumviri-detecting-trackers-and-mixed-trackers-with-a-breakage-detector/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="evocrawl: exploring web application code and state using evocrawl：使用web应用程序代码探索并使用状态 xiangyu guo (university of toronto), akshay kawlay (university of toronto), eric liu (university of...xiangyu guo">
+            <div class="paper-number">#22</div>
+            <div class="paper-title-en">EvoCrawl: Exploring Web Application Code and State using</div>
+            <div class="paper-title-zh">Evocrawl：使用Web应用程序代码探索并使用状态</div>
+            <div class="paper-authors"><strong>作者:</strong> Xiangyu Guo (University of Toronto), Akshay Kawlay (University of Toronto), Eric Liu (University of...Xiangyu Guo</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/evocrawl-exploring-web-application-code-and-state-using-evolutionary-search/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="explanation as a watermark: towards harmless and multi-bit 作为水印的解释：迈向无害和多位 shuo shao (zhejiang university), yiming li (zhejiang university), hongwei yao (zhejiang university), yiling he...shuo shao">
+            <div class="paper-number">#23</div>
+            <div class="paper-title-en">Explanation as a Watermark: Towards Harmless and Multi-bit</div>
+            <div class="paper-title-zh">作为水印的解释：迈向无害和多位</div>
+            <div class="paper-authors"><strong>作者:</strong> Shuo Shao (Zhejiang University), Yiming Li (Zhejiang University), Hongwei Yao (Zhejiang University), Yiling He...Shuo Shao</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="generating api parameter security rules with llm for 使用llm生成api参数安全规则 jinghua liu (institute of information engineering, chinese academy of sciences, beijing, china; school of...">
+            <div class="paper-number">#24</div>
+            <div class="paper-title-en">Generating API Parameter Security Rules with LLM for</div>
+            <div class="paper-title-zh">使用LLM生成API参数安全规则</div>
+            <div class="paper-authors"><strong>作者:</strong> Jinghua Liu (Institute of Information Engineering, Chinese Academy of Sciences, Beijing, China; School of...</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/generating-api-parameter-security-rules-with-llm-for-api-misuse-detection/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="heimdall: towards risk-aware network management outsourcing heimdall：面向风险感知网络管理外包 yuejie wang (peking university), qiutong men (new york university), yongting chen (new york university...yuejie wang">
+            <div class="paper-number">#25</div>
+            <div class="paper-title-en">Heimdall: Towards Risk-Aware Network Management Outsourcing</div>
+            <div class="paper-title-zh">Heimdall：面向风险感知网络管理外包</div>
+            <div class="paper-authors"><strong>作者:</strong> Yuejie Wang (Peking University), Qiutong Men (New York University), Yongting Chen (New York University...Yuejie Wang</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="horcrux: synthesize, split, shift and stay alive; preventing horcrux：合成，分裂，转移和保持活力；预防 anqi tian (institute of software, chinese academy of sciences; school of computer science and...">
+            <div class="paper-number">#26</div>
+            <div class="paper-title-en">Horcrux: Synthesize, Split, Shift and Stay Alive; Preventing</div>
+            <div class="paper-title-zh">Horcrux：合成，分裂，转移和保持活力；预防</div>
+            <div class="paper-authors"><strong>作者:</strong> Anqi Tian (Institute of Software, Chinese Academy of Sciences; School of Computer Science and...</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/horcrux-synthesize-split-shift-and-stay-alive-preventing-channel-depletion-via-universal-and-enhanced-multi-hop-payments/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="incorporating gradients to rules: towards lightweight, adaptive provenance-based 将梯度纳入规则：朝基于自适应出处的轻巧，基于自适应 lingzhi wang (northwestern university), xiangmin shen (northwestern university), weijian li (northwestern university), zhenyuan li">
+            <div class="paper-number">#27</div>
+            <div class="paper-title-en">Incorporating Gradients to Rules: Towards Lightweight, Adaptive Provenance-based</div>
+            <div class="paper-title-zh">将梯度纳入规则：朝基于自适应出处的轻巧，基于自适应</div>
+            <div class="paper-authors"><strong>作者:</strong> Lingzhi Wang (Northwestern University), Xiangmin Shen (Northwestern University), Weijian Li (Northwestern University), Zhenyuan LI</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/incorporating-gradients-to-rules-towards-lightweight-adaptive-provenance-based-intrusion-detection/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="kronos: a secure and generic sharding blockchain consensus 克罗诺斯：安全且通用的碎片区块链共识 yizhong liu (beihang university), andi liu (beihang university), yuan lu (institute of software chinese">
+            <div class="paper-number">#28</div>
+            <div class="paper-title-en">Kronos: A Secure and Generic Sharding Blockchain Consensus</div>
+            <div class="paper-title-zh">克罗诺斯：安全且通用的碎片区块链共识</div>
+            <div class="paper-authors"><strong>作者:</strong> Yizhong Liu (Beihang University), Andi Liu (Beihang University), Yuan Lu (Institute of Software Chinese</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/kronos-a-secure-and-generic-sharding-blockchain-consensus-with-optimized-overhead/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="leakless: selective data protection against memory leakage attacks 无泄漏：选择性数据保护针对内存泄漏攻击 maryam rostamipoor (stony brook university), seyedhamed ghavamnia (university of connecticut), michalis polychronakis (stony brook">
+            <div class="paper-number">#29</div>
+            <div class="paper-title-en">LeakLess: Selective Data Protection against Memory Leakage Attacks</div>
+            <div class="paper-title-zh">无泄漏：选择性数据保护针对内存泄漏攻击</div>
+            <div class="paper-authors"><strong>作者:</strong> Maryam Rostamipoor (Stony Brook University), Seyedhamed Ghavamnia (University of Connecticut), Michalis Polychronakis (Stony Brook</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/leakless-selective-data-protection-against-memory-leakage-attacks-for-serverless-platforms/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="magmaw: modality-agnostic adversarial attacks on machine learning-based wireless magmaw：对基于机器学习的无线无线无线攻击的情态 - 不足的对抗性攻击 jung-woo chang (university of california, san diego), ke sun (university of california, san diego)">
+            <div class="paper-number">#30</div>
+            <div class="paper-title-en">Magmaw: Modality-Agnostic Adversarial Attacks on Machine Learning-Based Wireless</div>
+            <div class="paper-title-zh">Magmaw：对基于机器学习的无线无线无线攻击的情态 - 不足的对抗性攻击</div>
+            <div class="paper-authors"><strong>作者:</strong> Jung-Woo Chang (University of California, San Diego), Ke Sun (University of California, San Diego)</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/magmaw-modality-agnostic-adversarial-attacks-on-machine-learning-based-wireless-communication-systems/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="malintent: coverage guided intent fuzzing framework for android malintent：android的覆盖范围指导意图模糊框架 ammar askar (georgia institute of technology), fabian fleischer (georgia institute of technology), christopher kruegel">
+            <div class="paper-number">#31</div>
+            <div class="paper-title-en">MALintent: Coverage Guided Intent Fuzzing Framework for Android</div>
+            <div class="paper-title-zh">Malintent：Android的覆盖范围指导意图模糊框架</div>
+            <div class="paper-authors"><strong>作者:</strong> Ammar Askar (Georgia Institute of Technology), Fabian Fleischer (Georgia Institute of Technology), Christopher Kruegel</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="manifoldchain: maximizing blockchain throughput via bandwidth-clustered sharding 歧管链：通过带宽群集碎片最大化区块链吞吐量 chunjiang che (the hong kong university of science and technology (guangzhou)), songze li (southeast">
+            <div class="paper-number">#32</div>
+            <div class="paper-title-en">Manifoldchain: Maximizing Blockchain Throughput via Bandwidth-Clustered Sharding</div>
+            <div class="paper-title-zh">歧管链：通过带宽群集碎片最大化区块链吞吐量</div>
+            <div class="paper-authors"><strong>作者:</strong> Chunjiang Che (The Hong Kong University of Science and Technology (Guangzhou)), Songze Li (Southeast</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/manifoldchain-maximizing-blockchain-throughput-via-bandwidth-clustered-sharding/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="mens sana in corpore sano: sound firmware corpora corpore的男士sana sano：声音固件语料库 renã">
+            <div class="paper-number">#33</div>
+            <div class="paper-title-en">Mens Sana In Corpore Sano: Sound Firmware Corpora</div>
+            <div class="paper-title-zh">Corpore的男士Sana Sano：声音固件语料库</div>
+            <div class="paper-authors"><strong>作者:</strong> RenÃ</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/mens-sana-in-corpore-sano-sound-firmware-corpora-for-vulnerability-research/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="mineshark: cryptomining traffic detection at scale mineshark：大规模的加密交通检测 shaoke xi (zhejiang university), tianyi fu (zhejiang university), kai bu (zhejiang university), chunling yang">
+            <div class="paper-number">#34</div>
+            <div class="paper-title-en">MineShark: Cryptomining Traffic Detection at Scale</div>
+            <div class="paper-title-zh">Mineshark：大规模的加密交通检测</div>
+            <div class="paper-authors"><strong>作者:</strong> Shaoke Xi (Zhejiang University), Tianyi Fu (Zhejiang University), Kai Bu (Zhejiang University), Chunling Yang</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="misdirection of trust: demystifying the abuse of dedicated 信任的误导：揭开滥用专用的滥用 zhibo zhang (fudan university), lei zhang (fudan university), zhangyue zhang (fudan university), geng hong">
+            <div class="paper-number">#35</div>
+            <div class="paper-title-en">Misdirection of Trust: Demystifying the Abuse of Dedicated</div>
+            <div class="paper-title-zh">信任的误导：揭开滥用专用的滥用</div>
+            <div class="paper-authors"><strong>作者:</strong> Zhibo Zhang (Fudan University), Lei Zhang (Fudan University), Zhangyue Zhang (Fudan University), Geng Hong</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/misdirection-of-trust-demystifying-the-abuse-of-dedicated-url-shortening-service/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="moneta: ex-vivo gpu driver fuzzing by recalling in-vivo moneta：前vivo gpu驾驶员通过召回体内 joonkyo jung (department of computer science, yonsei university), jisoo jang (department of computer science">
+            <div class="paper-number">#36</div>
+            <div class="paper-title-en">Moneta: Ex-Vivo GPU Driver Fuzzing by Recalling In-Vivo</div>
+            <div class="paper-title-zh">MONETA：前Vivo GPU驾驶员通过召回体内</div>
+            <div class="paper-authors"><strong>作者:</strong> Joonkyo Jung (Department of Computer Science, Yonsei University), Jisoo Jang (Department of Computer Science</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/moneta-ex-vivo-gpu-driver-fuzzing-by-recalling-in-vivo-execution-states/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="mtzk: testing and exploring bugs in zero-knowledge (zk) mtzk：零知识（zk）中的测试和探索错误 dongwei xiao (the hong kong university of science and technology), zhibo liu (the hong">
+            <div class="paper-number">#37</div>
+            <div class="paper-title-en">MTZK: Testing and Exploring Bugs in Zero-Knowledge (ZK)</div>
+            <div class="paper-title-zh">MTZK：零知识（ZK）中的测试和探索错误</div>
+            <div class="paper-authors"><strong>作者:</strong> Dongwei Xiao (The Hong Kong University of Science and Technology), Zhibo Liu (The Hong</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="off-path tcp hijacking in wi-fi networks: a packet-size wi-fi网络中劫持的情况下劫持：数据包大小 ziqiang wang (southeast university), xuewei feng (tsinghua university), qi li (tsinghua university), kun sun">
+            <div class="paper-number">#38</div>
+            <div class="paper-title-en">Off-Path TCP Hijacking in Wi-Fi Networks: A Packet-Size</div>
+            <div class="paper-title-zh">Wi-Fi网络中劫持的情况下劫持：数据包大小</div>
+            <div class="paper-authors"><strong>作者:</strong> Ziqiang Wang (Southeast University), Xuewei Feng (Tsinghua University), Qi Li (Tsinghua University), Kun Sun</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/off-path-tcp-hijacking-in-wi-fi-networks-a-packet-size-side-channel-attack/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="on the realism of lidar spoofing attacks against 关于激增的现实主义欺骗攻击 takami sato (university of california, irvine), ryo suzuki (keio university), yuki hayakawa (keio university)">
+            <div class="paper-number">#39</div>
+            <div class="paper-title-en">On the Realism of LiDAR Spoofing Attacks against</div>
+            <div class="paper-title-zh">关于激增的现实主义欺骗攻击</div>
+            <div class="paper-authors"><strong>作者:</strong> Takami Sato (University of California, Irvine), Ryo Suzuki (Keio University), Yuki Hayakawa (Keio University)</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/on-the-realism-of-lidar-spoofing-attacks-against-autonomous-driving-vehicle-at-high-speed-and-long-distance/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="passive inference attacks on split learning via adversarial 通过对抗性对分裂学习的被动推论攻击 xiaochen zhu (national university of singapore &amp; massachusetts institute of technology), xinjian luo (national">
+            <div class="paper-number">#40</div>
+            <div class="paper-title-en">Passive Inference Attacks on Split Learning via Adversarial</div>
+            <div class="paper-title-zh">通过对抗性对分裂学习的被动推论攻击</div>
+            <div class="paper-authors"><strong>作者:</strong> Xiaochen Zhu (National University of Singapore &amp; Massachusetts Institute of Technology), Xinjian Luo (National</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/passive-inference-attacks-on-split-learning-via-adversarial-regularization/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="phantomlidar: cross-modality signal injection attacks against lidar 幻影：跨模式信号注入对激光雷达的攻击 zizhi jin (zhejiang university), qinhong jiang (zhejiang university), xuancun lu (zhejiang university), chen yan">
+            <div class="paper-number">#41</div>
+            <div class="paper-title-en">PhantomLiDAR: Cross-modality Signal Injection Attacks against LiDAR</div>
+            <div class="paper-title-zh">幻影：跨模式信号注入对激光雷达的攻击</div>
+            <div class="paper-authors"><strong>作者:</strong> Zizhi Jin (Zhejiang University), Qinhong Jiang (Zhejiang University), Xuancun Lu (Zhejiang University), Chen Yan</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/phantomlidar-cross-modality-signal-injection-attacks-against-lidar/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="powerradio: manipulate sensor measurement via power gnd radiation powerradio：通过power gnd辐射操纵传感器测量 yan jiang (zhejiang university), xiaoyu ji (zhejiang university), yancheng jiang (zhejiang university), kai wang">
+            <div class="paper-number">#42</div>
+            <div class="paper-title-en">PowerRadio: Manipulate Sensor Measurement via Power GND Radiation</div>
+            <div class="paper-title-zh">PowerRadio：通过Power GND辐射操纵传感器测量</div>
+            <div class="paper-authors"><strong>作者:</strong> Yan Jiang (Zhejiang University), Xiaoyu Ji (Zhejiang University), Yancheng Jiang (Zhejiang University), Kai Wang</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="raconteur: a knowledgeable, insightful, and portable llm-powered shell raconteur：知识渊博，有见地和便携式llm驱动的壳 jiangyi deng (zhejiang university), xinfeng li (zhejiang university), yanjiao chen (zhejiang university), yijie bai">
+            <div class="paper-number">#43</div>
+            <div class="paper-title-en">RACONTEUR: A Knowledgeable, Insightful, and Portable LLM-Powered Shell</div>
+            <div class="paper-title-zh">RACONTEUR：知识渊博，有见地和便携式LLM驱动的壳</div>
+            <div class="paper-authors"><strong>作者:</strong> Jiangyi Deng (Zhejiang University), Xinfeng Li (Zhejiang University), Yanjiao Chen (Zhejiang University), Yijie Bai</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/raconteur-a-knowledgeable-insightful-and-portable-llm-powered-shell-command-explainer/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="radsee: see your handwriting through walls using fmcw radsee：使用fmcw查看您的笔迹 shichen zhang (michigan state university), qijun wang (michigan state university), maolin gan (michigan state">
+            <div class="paper-number">#44</div>
+            <div class="paper-title-en">RadSee: See Your Handwriting Through Walls Using FMCW</div>
+            <div class="paper-title-zh">RADSEE：使用FMCW查看您的笔迹</div>
+            <div class="paper-authors"><strong>作者:</strong> Shichen Zhang (Michigan State University), Qijun Wang (Michigan State University), Maolin Gan (Michigan State</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="redan: an empirical study on remote dos attacks redan：一项关于远程dos攻击的实证研究 xuewei feng (tsinghua university), yuxiang yang (tsinghua university), qi li (tsinghua university), xingxiang zhan">
+            <div class="paper-number">#45</div>
+            <div class="paper-title-en">ReDAN: An Empirical Study on Remote DoS Attacks</div>
+            <div class="paper-title-zh">REDAN：一项关于远程DOS攻击的实证研究</div>
+            <div class="paper-authors"><strong>作者:</strong> Xuewei Feng (Tsinghua University), Yuxiang Yang (Tsinghua University), Qi Li (Tsinghua University), Xingxiang Zhan</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/redan-an-empirical-study-on-remote-dos-attacks-against-nat-networks/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="reinforcement unlearning 加固学习 dayong ye (university of technology sydney), tianqing zhu (city university of macau), congcong zhu">
+            <div class="paper-number">#46</div>
+            <div class="paper-title-en">Reinforcement Unlearning</div>
+            <div class="paper-title-zh">加固学习</div>
+            <div class="paper-authors"><strong>作者:</strong> Dayong Ye (University of Technology Sydney), Tianqing Zhu (City University of Macau), Congcong Zhu</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/reinforcement-unlearning/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="rethink: reveal the threat of electromagnetic interference on 重新考虑：揭示电磁干扰的威胁 fengchen yang (zhejiang university; zju qi-anxin iot security joint labratory), zihao dan (zhejiang university;">
+            <div class="paper-number">#47</div>
+            <div class="paper-title-en">ReThink: Reveal the Threat of Electromagnetic Interference on</div>
+            <div class="paper-title-zh">重新考虑：揭示电磁干扰的威胁</div>
+            <div class="paper-authors"><strong>作者:</strong> Fengchen Yang (Zhejiang University; ZJU QI-ANXIN IoT Security Joint Labratory), Zihao Dan (Zhejiang University;</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/rethink-reveal-the-threat-of-electromagnetic-interference-on-power-inverters/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="revisiting em-based estimation for locally differentially private protocols 重新审查基于em的本地私人协议的估计 yutong ye (institute of software, chinese academy of sciences &amp; zhongguancun laboratory, beijing, pr.china.)">
+            <div class="paper-number">#48</div>
+            <div class="paper-title-en">Revisiting EM-based Estimation for Locally Differentially Private Protocols</div>
+            <div class="paper-title-zh">重新审查基于EM的本地私人协议的估计</div>
+            <div class="paper-authors"><strong>作者:</strong> Yutong Ye (Institute of software, Chinese Academy of Sciences &amp; Zhongguancun Laboratory, Beijing, PR.China.)</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/revisiting-em-based-estimation-for-locally-differentially-private-protocols/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="revisiting physical-world adversarial attack on traffic sign recognition: 重新访问物理世界对交通标志识别的对抗性攻击： ningfei wang (university of california, irvine), shaoyuan xie (university of california, irvine), takami sato">
+            <div class="paper-number">#49</div>
+            <div class="paper-title-en">Revisiting Physical-World Adversarial Attack on Traffic Sign Recognition:</div>
+            <div class="paper-title-zh">重新访问物理世界对交通标志识别的对抗性攻击：</div>
+            <div class="paper-authors"><strong>作者:</strong> Ningfei Wang (University of California, Irvine), Shaoyuan Xie (University of California, Irvine), Takami Sato</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/revisiting-physical-world-adversarial-attack-on-traffic-sign-recognition-a-commercial-systems-perspective/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="rondo: scalable and reconfiguration-friendly randomness beacon rondo：可扩展和重新配置的随机信标 xuanji meng (tsinghua university), xiao sui (shandong university), zhaoxin yang (tsinghua university), kang rong">
+            <div class="paper-number">#50</div>
+            <div class="paper-title-en">Rondo: Scalable and Reconfiguration-Friendly Randomness Beacon</div>
+            <div class="paper-title-zh">Rondo：可扩展和重新配置的随机信标</div>
+            <div class="paper-authors"><strong>作者:</strong> Xuanji Meng (Tsinghua University), Xiao Sui (Shandong University), Zhaoxin Yang (Tsinghua University), Kang Rong</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="scrutinizer: towards secure forensics on compromised trustzone 审查器：在受感染的信任方面迈向安全取证 yiming zhang (southern university of science and technology and the hong kong polytechnic university)">
+            <div class="paper-number">#51</div>
+            <div class="paper-title-en">SCRUTINIZER: Towards Secure Forensics on Compromised TrustZone</div>
+            <div class="paper-title-zh">审查器：在受感染的信任方面迈向安全取证</div>
+            <div class="paper-authors"><strong>作者:</strong> Yiming Zhang (Southern University of Science and Technology and The Hong Kong Polytechnic University)</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="secret spilling drive: leaking user behavior through ssd 秘密溢出驱动器：通过ssd泄漏用户行为 jonas juffinger (graz university of technology), fabian rauscher (graz university of technology), giuseppe la">
+            <div class="paper-number">#52</div>
+            <div class="paper-title-en">Secret Spilling Drive: Leaking User Behavior through SSD</div>
+            <div class="paper-title-zh">秘密溢出驱动器：通过SSD泄漏用户行为</div>
+            <div class="paper-authors"><strong>作者:</strong> Jonas Juffinger (Graz University of Technology), Fabian Rauscher (Graz University of Technology), Giuseppe La</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/secret-spilling-drive-leaking-user-behavior-through-ssd-contention/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="secure ip address allocation at cloud scale 安全的ip地址分配在云规模上分配 eric pauley (university of wisconsinâ">
+            <div class="paper-number">#53</div>
+            <div class="paper-title-en">Secure IP Address Allocation at Cloud Scale</div>
+            <div class="paper-title-zh">安全的IP地址分配在云规模上分配</div>
+            <div class="paper-authors"><strong>作者:</strong> Eric Pauley (University of Wisconsinâ</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/secure-ip-address-allocation-at-cloud-scale/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="secure transformer inference made non-interactive 安全变压器推理使非相互作用 jiawen zhang (zhejiang university), xinpeng yang (zhejiang university), lipeng he (university of waterloo), kejia">
+            <div class="paper-number">#54</div>
+            <div class="paper-title-en">Secure Transformer Inference Made Non-interactive</div>
+            <div class="paper-title-zh">安全变压器推理使非相互作用</div>
+            <div class="paper-authors"><strong>作者:</strong> Jiawen Zhang (Zhejiang University), Xinpeng Yang (Zhejiang University), Lipeng He (University of Waterloo), Kejia</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="silence false alarms: identifying anti-reentrancy patterns on ethereum 沉默错误警报：识别以太坊上的抗悔改模式 qiyang song (institute of information engineering, chinese academy of sciences; school of cyber security">
+            <div class="paper-number">#55</div>
+            <div class="paper-title-en">Silence False Alarms: Identifying Anti-Reentrancy Patterns on Ethereum</div>
+            <div class="paper-title-zh">沉默错误警报：识别以太坊上的抗悔改模式</div>
+            <div class="paper-authors"><strong>作者:</strong> Qiyang Song (Institute of Information Engineering, Chinese Academy of Sciences; School of Cyber Security</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/silence-false-alarms-identifying-anti-reentrancy-patterns-on-ethereum-to-refine-smart-contract-reentrancy-detection/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="the (un)usual suspects â （联合国）通常的嫌疑人 maria hellenthal (cispa helmholtz center for information security), lena gotsche (cispa helmholtz center for">
+            <div class="paper-number">#56</div>
+            <div class="paper-title-en">The (Un)usual Suspects â</div>
+            <div class="paper-title-zh">（联合国）通常的嫌疑人</div>
+            <div class="paper-authors"><strong>作者:</strong> Maria Hellenthal (CISPA Helmholtz Center for Information Security), Lena Gotsche (CISPA Helmholtz Center for</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/the-unusual-suspects-studying-reasons-for-lacking-updates-in-wordpress/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="the midas touch: triggering the capability of llms midas触摸：触发llm的功能 yi yang (institute of information engineering, chinese academy of sciences, beijing, china; school of">
+            <div class="paper-number">#57</div>
+            <div class="paper-title-en">The Midas Touch: Triggering the Capability of LLMs</div>
+            <div class="paper-title-zh">MIDAS触摸：触发LLM的功能</div>
+            <div class="paper-authors"><strong>作者:</strong> Yi Yang (Institute of Information Engineering, Chinese Academy of Sciences, Beijing, China; School of</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/the-midas-touch-triggering-the-capability-of-llms-for-rm-api-misuse-detection/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="the philosopherâ 哲学家 tian dong (shanghai jiao tong university), minhui xue (csiro&#x27;s data61), guoxing chen (shanghai jiao">
+            <div class="paper-number">#58</div>
+            <div class="paper-title-en">The Philosopherâ</div>
+            <div class="paper-title-zh">哲学家</div>
+            <div class="paper-authors"><strong>作者:</strong> Tian Dong (Shanghai Jiao Tong University), Minhui Xue (CSIRO&#x27;s Data61), Guoxing Chen (Shanghai Jiao</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="the power of words: a comprehensive analysis of 单词的力量：全面分析 yusra elbitar (cispa helmholtz center for information security), alexander hart (cispa helmholtz center for">
+            <div class="paper-number">#59</div>
+            <div class="paper-title-en">The Power of Words: A Comprehensive Analysis of</div>
+            <div class="paper-title-zh">单词的力量：全面分析</div>
+            <div class="paper-authors"><strong>作者:</strong> Yusra Elbitar (CISPA Helmholtz Center for Information Security), Alexander Hart (CISPA Helmholtz Center for</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/the-power-of-words-a-comprehensive-analysis-of-rationales-and-their-effects-on-users-permission-decisions/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="the skeleton keys: a large scale analysis of 骨架键：大规模分析 yizhe shi (fudan university), zhemin yang (fudan university), kangwei zhong (fudan university), guangliang yang">
+            <div class="paper-number">#60</div>
+            <div class="paper-title-en">The Skeleton Keys: A Large Scale Analysis of</div>
+            <div class="paper-title-zh">骨架键：大规模分析</div>
+            <div class="paper-authors"><strong>作者:</strong> Yizhe Shi (Fudan University), Zhemin Yang (Fudan University), Kangwei Zhong (Fudan University), Guangliang Yang</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/the-skeleton-keys-a-large-scale-analysis-of-credential-leakage-in-mini-apps/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="themis: regulating textual inversion for personalized concept censorship 主题：调节个性化概念审查制度的文本反演 yutong wu (nanyang technological university), jie zhang (centre for frontier ai research, agency for">
+            <div class="paper-number">#61</div>
+            <div class="paper-title-en">THEMIS: Regulating Textual Inversion for Personalized Concept Censorship</div>
+            <div class="paper-title-zh">主题：调节个性化概念审查制度的文本反演</div>
+            <div class="paper-authors"><strong>作者:</strong> Yutong Wu (Nanyang Technological University), Jie Zhang (Centre for Frontier AI Research, Agency for</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/themis-regulating-textual-inversion-for-personalized-concept-censorship/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="time-varying bottleneck links in leo satellite networks: identification leo卫星网络中的时变瓶颈链接：身份证明 yangtao deng (tsinghua university), qian wu (tsinghua university), zeqi lai (tsinghua university), chenwei gu">
+            <div class="paper-number">#62</div>
+            <div class="paper-title-en">Time-varying Bottleneck Links in LEO Satellite Networks: Identification</div>
+            <div class="paper-title-zh">LEO卫星网络中的时变瓶颈链接：身份证明</div>
+            <div class="paper-authors"><strong>作者:</strong> Yangtao Deng (Tsinghua University), Qian Wu (Tsinghua University), Zeqi Lai (Tsinghua University), Chenwei Gu</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/time-varying-bottleneck-links-in-leo-satellite-networks-identification-exploits-and-countermeasures/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="too subtle to notice: investigating executable stack issues 太微妙而无法注意：调查可执行堆栈问题 hengkai ye (the pennsylvania state university), hong hu (the pennsylvania state university)">
+            <div class="paper-number">#63</div>
+            <div class="paper-title-en">Too Subtle to Notice: Investigating Executable Stack Issues</div>
+            <div class="paper-title-zh">太微妙而无法注意：调查可执行堆栈问题</div>
+            <div class="paper-authors"><strong>作者:</strong> Hengkai Ye (The Pennsylvania State University), Hong Hu (The Pennsylvania State University)</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/too-subtle-to-notice-investigating-executable-stack-issues-in-linux-systems/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="trajdeleter: enabling trajectory forgetting in offline reinforcement learning trajdeleter：使轨迹忘记在离线增强学习中 chen gong (university of vriginia), kecen li (chinese academy of sciences), jin yao (university">
+            <div class="paper-number">#64</div>
+            <div class="paper-title-en">TrajDeleter: Enabling Trajectory Forgetting in Offline Reinforcement Learning</div>
+            <div class="paper-title-zh">trajdeleter：使轨迹忘记在离线增强学习中</div>
+            <div class="paper-authors"><strong>作者:</strong> Chen Gong (University of Vriginia), Kecen Li (Chinese Academy of Sciences), Jin Yao (University</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/trajdeleter-enabling-trajectory-forgetting-in-offline-reinforcement-learning-agents/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="transparency or information overload? evaluating usersâ 透明度或信息超载？评估用户 xiaoyuan wu (carnegie mellon university), lydia hu (carnegie mellon university), eric zeng (carnegie mellon">
+            <div class="paper-number">#65</div>
+            <div class="paper-title-en">Transparency or Information Overload? Evaluating Usersâ</div>
+            <div class="paper-title-zh">透明度或信息超载？评估用户</div>
+            <div class="paper-authors"><strong>作者:</strong> Xiaoyuan Wu (Carnegie Mellon University), Lydia Hu (Carnegie Mellon University), Eric Zeng (Carnegie Mellon</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/transparency-or-information-overload-evaluating-users-comprehension-and-perceptions-of-the-ios-app-privacy-report/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="tweezers: a framework for security event detection via 镊子：通过 jian cui (indiana university), hanna kim (kaist), eugene jang (s2w inc.), dayeon yim (s2w">
+            <div class="paper-number">#66</div>
+            <div class="paper-title-en">Tweezers: A Framework for Security Event Detection via</div>
+            <div class="paper-title-zh">镊子：通过</div>
+            <div class="paper-authors"><strong>作者:</strong> Jian Cui (Indiana University), Hanna Kim (KAIST), Eugene Jang (S2W Inc.), Dayeon Yim (S2W</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/tweezers-a-framework-for-security-event-detection-via-event-attribution-centric-tweet-embedding/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="type++: prohibiting type confusion with inline type information 类型++：禁止与内联类型信息混淆 nicolas badoux (epfl), flavio toffalini (ruhr-universitã">
+            <div class="paper-number">#67</div>
+            <div class="paper-title-en">type++: Prohibiting Type Confusion with Inline Type Information</div>
+            <div class="paper-title-zh">类型++：禁止与内联类型信息混淆</div>
+            <div class="paper-authors"><strong>作者:</strong> Nicolas Badoux (EPFL), Flavio Toffalini (Ruhr-UniversitÃ</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="understanding data importance in machine learning attacks: does 了解机器学习攻击中的数据重要性：确实 rui wen (cispa helmholtz center for information security), michael backes (cispa helmholtz center for">
+            <div class="paper-number">#68</div>
+            <div class="paper-title-en">Understanding Data Importance in Machine Learning Attacks: Does</div>
+            <div class="paper-title-zh">了解机器学习攻击中的数据重要性：确实</div>
+            <div class="paper-authors"><strong>作者:</strong> Rui Wen (CISPA Helmholtz Center for Information Security), Michael Backes (CISPA Helmholtz Center for</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/understanding-data-importance-in-machine-learning-attacks-does-valuable-data-pose-greater-harm/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="understanding miniapp malware: identification, dissection, and characterization 了解miniapp恶意软件：识别，解剖和表征 yuqing yang (the ohio state university), yue zhang (drexel university), zhiqiang lin (the ohio">
+            <div class="paper-number">#69</div>
+            <div class="paper-title-en">Understanding Miniapp Malware: Identification, Dissection, and Characterization</div>
+            <div class="paper-title-zh">了解Miniapp恶意软件：识别，解剖和表征</div>
+            <div class="paper-authors"><strong>作者:</strong> Yuqing Yang (The Ohio State University), Yue Zhang (Drexel University), Zhiqiang Lin (The Ohio</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/understanding-miniapp-malware-identification-dissection-and-characterization/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="veribin: adaptive verification of patches at the binary veribin：在二进制的贴片的自适应验证 hongwei wu (purdue university), jianliang wu (simon fraser university), ruoyu wu (purdue university), ayushi">
+            <div class="paper-number">#70</div>
+            <div class="paper-title-en">VeriBin: Adaptive Verification of Patches at the Binary</div>
+            <div class="paper-title-zh">Veribin：在二进制的贴片的自适应验证</div>
+            <div class="paper-authors"><strong>作者:</strong> Hongwei Wu (Purdue University), Jianliang Wu (Simon Fraser University), Ruoyu Wu (Purdue University), Ayushi</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="wallbleed: a memory disclosure vulnerability in the great 墙：大巨大的记忆披露脆弱性 shencha fan (gfw report), jackson sippe (university of colorado boulder), sakamoto san (shinonome lab)">
+            <div class="paper-number">#71</div>
+            <div class="paper-title-en">Wallbleed: A Memory Disclosure Vulnerability in the Great</div>
+            <div class="paper-title-zh">墙：大巨大的记忆披露脆弱性</div>
+            <div class="paper-authors"><strong>作者:</strong> Shencha Fan (GFW Report), Jackson Sippe (University of Colorado Boulder), Sakamoto San (Shinonome Lab)</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/wallbleed-a-memory-disclosure-vulnerability-in-the-great-firewall-of-china/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="waven: webassembly memory virtualization for enclaves waven：飞地的webassembly内存虚拟化虚拟化 weili wang (southern university of science and technology), honghan ji (bytedance inc.), peixuan he">
+            <div class="paper-number">#72</div>
+            <div class="paper-title-en">WAVEN: WebAssembly Memory Virtualization for Enclaves</div>
+            <div class="paper-title-zh">Waven：飞地的WebAssembly内存虚拟化虚拟化</div>
+            <div class="paper-authors"><strong>作者:</strong> Weili Wang (Southern University of Science and Technology), Honghan Ji (ByteDance Inc.), Peixuan He</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="welcome to jurassic park: a comprehensive study of 欢迎来到侏罗纪公园：一项全面的研究 abdullah alhamdan (cispa helmholtz center for information security), cristian-alexandru staicu (cispa helmholtz center for">
+            <div class="paper-number">#73</div>
+            <div class="paper-title-en">Welcome to Jurassic Park: A Comprehensive Study of</div>
+            <div class="paper-title-zh">欢迎来到侏罗纪公园：一项全面的研究</div>
+            <div class="paper-authors"><strong>作者:</strong> Abdullah AlHamdan (CISPA Helmholtz Center for Information Security), Cristian-Alexandru Staicu (CISPA Helmholtz Center for</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/welcome-to-jurassic-park-a-comprehensive-study-of-security-risks-in-deno-and-its-ecosystem/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="a comprehensive memory safety analysis of bootloaders 引导程序的全面记忆安全分析 jianqiang wang (cispa helmholtz center for information security), meng wang (cispa helmholtz center for">
+            <div class="paper-number">#74</div>
+            <div class="paper-title-en">A Comprehensive Memory Safety Analysis of Bootloaders</div>
+            <div class="paper-title-zh">引导程序的全面记忆安全分析</div>
+            <div class="paper-authors"><strong>作者:</strong> Jianqiang Wang (CISPA Helmholtz Center for Information Security), Meng Wang (CISPA Helmholtz Center for</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="a formal approach to multi-layered privileges for enclaves 用于飞地多层特权的正式方法 ganxiang yang (shanghai jiao tong university), chenyang liu (shanghai jiao tong university), zhen huang">
+            <div class="paper-number">#75</div>
+            <div class="paper-title-en">A Formal Approach to Multi-Layered Privileges for Enclaves</div>
+            <div class="paper-title-zh">用于飞地多层特权的正式方法</div>
+            <div class="paper-authors"><strong>作者:</strong> Ganxiang Yang (Shanghai Jiao Tong University), Chenyang Liu (Shanghai Jiao Tong University), Zhen Huang</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="a large-scale measurement study of the proxy protocol 代理协议的大规模测量研究 stijn pletinckx (university of california, santa barbara), christopher kruegel (university of california, santa barbara)">
+            <div class="paper-number">#76</div>
+            <div class="paper-title-en">A Large-Scale Measurement Study of the PROXY Protocol</div>
+            <div class="paper-title-zh">代理协议的大规模测量研究</div>
+            <div class="paper-authors"><strong>作者:</strong> Stijn Pletinckx (University of California, Santa Barbara), Christopher Kruegel (University of California, Santa Barbara)</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/a-large-scale-measurement-study-of-the-proxy-protocol-and-its-security-implications/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="a multifaceted study on the use of tls 一项关于使用tls的多方面研究 ka fun tang (the chinese university of hong kong), che wei tu (the chinese">
+            <div class="paper-number">#77</div>
+            <div class="paper-title-en">A Multifaceted Study on the Use of TLS</div>
+            <div class="paper-title-zh">一项关于使用TLS的多方面研究</div>
+            <div class="paper-authors"><strong>作者:</strong> Ka Fun Tang (The Chinese University of Hong Kong), Che Wei Tu (The Chinese</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/a-multifaceted-study-on-the-use-of-tls-and-auto-detect-in-email-ecosystems/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="a new ppml paradigm for quantized models 用于量化模型的新ppml范式 tianpei lu (the state key laboratory of blockchain and data security, zhejiang university), bingsheng">
+            <div class="paper-number">#78</div>
+            <div class="paper-title-en">A New PPML Paradigm for Quantized Models</div>
+            <div class="paper-title-zh">用于量化模型的新PPML范式</div>
+            <div class="paper-authors"><strong>作者:</strong> Tianpei Lu (The State Key Laboratory of Blockchain and Data Security, Zhejiang University), Bingsheng</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/a-new-ppml-paradigm-for-quantized-models/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="alba: the dawn of scalable bridges for blockchains alba：可扩展的区块桥的曙光 giulia scaffino (tu wien), lukas aumayr (tu wien), mahsa bastankhah (princeton university), zeta avarikioti">
+            <div class="paper-number">#79</div>
+            <div class="paper-title-en">Alba: The Dawn of Scalable Bridges for Blockchains</div>
+            <div class="paper-title-zh">Alba：可扩展的区块桥的曙光</div>
+            <div class="paper-authors"><strong>作者:</strong> Giulia Scaffino (TU Wien), Lukas Aumayr (TU Wien), Mahsa Bastankhah (Princeton University), Zeta Avarikioti</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="all your (data)base are belong to us: characterizing 您所有的（数据）基础属于我们：表征 kevin van liebergen (imdea software institute), gibran gomez (imdea software institute), srdjan matic (imdea">
+            <div class="paper-number">#80</div>
+            <div class="paper-title-en">All your (data)base are belong to us: Characterizing</div>
+            <div class="paper-title-zh">您所有的（数据）基础属于我们：表征</div>
+            <div class="paper-authors"><strong>作者:</strong> Kevin van Liebergen (IMDEA Software Institute), Gibran Gomez (IMDEA Software Institute), Srdjan Matic (IMDEA</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/all-your-database-are-belong-to-us-characterizing-database-ransomware-attacks/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="asgard: protecting on-device deep neural networks with virtualization-based asgard：通过基于虚拟化保护设备上的深度神经网络 myungsuk moon (yonsei university), minhee kim (yonsei university), joonkyo jung (yonsei university), dokyung song">
+            <div class="paper-number">#81</div>
+            <div class="paper-title-en">ASGARD: Protecting On-Device Deep Neural Networks with Virtualization-Based</div>
+            <div class="paper-title-zh">ASGARD：通过基于虚拟化保护设备上的深度神经网络</div>
+            <div class="paper-authors"><strong>作者:</strong> Myungsuk Moon (Yonsei University), Minhee Kim (Yonsei University), Joonkyo Jung (Yonsei University), Dokyung Song</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/asgard-protecting-on-device-deep-neural-networks-with-virtualization-based-trusted-execution-environments/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="attributing open-source contributions is critical but difficult: a 归因开源贡献至关重要，但很困难： jan-ulrich holtgrave (cispa helmholtz center for information security), kay friedrich (cispa helmholtz center for">
+            <div class="paper-number">#82</div>
+            <div class="paper-title-en">Attributing Open-Source Contributions is Critical but Difficult: A</div>
+            <div class="paper-title-zh">归因开源贡献至关重要，但很困难：</div>
+            <div class="paper-authors"><strong>作者:</strong> Jan-Ulrich Holtgrave (CISPA Helmholtz Center for Information Security), Kay Friedrich (CISPA Helmholtz Center for</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/attributing-open-source-contributions-is-critical-but-difficult-a-systematic-analysis-of-github-practices-and-their-impact-on-software-supply-chain-security/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="automated mass malware factory: the convergence of piggybacking 自动大规模恶意软件工厂：背式融合 heng li (huazhong university of science and technology), zhiyuan yao (huazhong university of science">
+            <div class="paper-number">#83</div>
+            <div class="paper-title-en">Automated Mass Malware Factory: The Convergence of Piggybacking</div>
+            <div class="paper-title-zh">自动大规模恶意软件工厂：背式融合</div>
+            <div class="paper-authors"><strong>作者:</strong> Heng Li (Huazhong University of Science and Technology), Zhiyuan Yao (Huazhong University of Science</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="automatic insecurity: exploring email auto-configuration in the wild 自动不安全：探索野外的电子邮件自动配置 shushang wen (school of cyber science and technology, university of science and technology of">
+            <div class="paper-number">#84</div>
+            <div class="paper-title-en">Automatic Insecurity: Exploring Email Auto-configuration in the Wild</div>
+            <div class="paper-title-zh">自动不安全：探索野外的电子邮件自动配置</div>
+            <div class="paper-authors"><strong>作者:</strong> Shushang Wen (School of Cyber Science and Technology, University of Science and Technology of</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/automatic-insecurity-exploring-email-auto-configuration-in-the-wild/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="automatic library fuzzing through api relation evolvement 自动图书馆通过api关系发展而模糊 jiayi lin (the university of hong kong), qingyu zhang (the university of hong kong)">
+            <div class="paper-number">#85</div>
+            <div class="paper-title-en">Automatic Library Fuzzing through API Relation Evolvement</div>
+            <div class="paper-title-zh">自动图书馆通过API关系发展而模糊</div>
+            <div class="paper-authors"><strong>作者:</strong> Jiayi Lin (The University of Hong Kong), Qingyu Zhang (The University of Hong Kong)</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="balancing privacy and data utilization: a comparative vignette 平衡隐私和数据利用：比较小插图 leona lassak (ruhr university bochum), hanna pã">
+            <div class="paper-number">#86</div>
+            <div class="paper-title-en">Balancing Privacy and Data Utilization: A Comparative Vignette</div>
+            <div class="paper-title-zh">平衡隐私和数据利用：比较小插图</div>
+            <div class="paper-authors"><strong>作者:</strong> Leona Lassak (Ruhr University Bochum), Hanna PÃ</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="barbie: robust backdoor detection based on latent separability 芭比娃娃：基于潜在可分离性的强大后门检测 hanlei zhang (zhejiang university), yijie bai (zhejiang university), yanjiao chen (zhejiang university), zhongming ma">
+            <div class="paper-number">#87</div>
+            <div class="paper-title-en">BARBIE: Robust Backdoor Detection Based on Latent Separability</div>
+            <div class="paper-title-zh">芭比娃娃：基于潜在可分离性的强大后门检测</div>
+            <div class="paper-authors"><strong>作者:</strong> Hanlei Zhang (Zhejiang University), Yijie Bai (Zhejiang University), Yanjiao Chen (Zhejiang University), Zhongming Ma</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="beyond classification: inferring function names in stripped binaries 超越分类：剥离二进制文件中推断功能名称 linxi jiang (the ohio state university), xin jin (the ohio state university), zhiqiang lin">
+            <div class="paper-number">#88</div>
+            <div class="paper-title-en">Beyond Classification: Inferring Function Names in Stripped Binaries</div>
+            <div class="paper-title-zh">超越分类：剥离二进制文件中推断功能名称</div>
+            <div class="paper-authors"><strong>作者:</strong> Linxi Jiang (The Ohio State University), Xin Jin (The Ohio State University), Zhiqiang Lin</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/beyond-classification-inferring-function-names-in-stripped-binaries-via-domain-adapted-llms/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="binenhance: an enhancement framework based on external environment binenhance：基于外部环境的增强框架 yongpan wang (institute of information engineering chinese academy of sciences &amp; university of chinese">
+            <div class="paper-number">#89</div>
+            <div class="paper-title-en">BinEnhance: An Enhancement Framework Based on External Environment</div>
+            <div class="paper-title-zh">Binenhance：基于外部环境的增强框架</div>
+            <div class="paper-authors"><strong>作者:</strong> Yongpan Wang (Institute of Information Engineering Chinese Academy of Sciences &amp; University of Chinese</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/binenhance-an-enhancement-framework-based-on-external-environment-semantics-for-binary-code-search/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="bitshield: defending against bit-flip attacks on dnn executables bitshield：防御dnn可执行文件的位叉攻击 yanzuo chen (the hong kong university of science and technology), yuanyuan yuan (the hong">
+            <div class="paper-number">#90</div>
+            <div class="paper-title-en">BitShield: Defending Against Bit-Flip Attacks on DNN Executables</div>
+            <div class="paper-title-zh">BITSHIELD：防御DNN可执行文件的位叉攻击</div>
+            <div class="paper-authors"><strong>作者:</strong> Yanzuo Chen (The Hong Kong University of Science and Technology), Yuanyuan Yuan (The Hong</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="blackbox fuzzing of distributed systems with multi-dimensional inputs 带有多维输入的分布式系统的黑盒模糊 yonghao zou (beihang university and peking university), jia-ju bai (beihang university), zu-ming jiang (eth">
+            <div class="paper-number">#91</div>
+            <div class="paper-title-en">Blackbox Fuzzing of Distributed Systems with Multi-Dimensional Inputs</div>
+            <div class="paper-title-zh">带有多维输入的分布式系统的黑盒模糊</div>
+            <div class="paper-authors"><strong>作者:</strong> Yonghao Zou (Beihang University and Peking University), Jia-Ju Bai (Beihang University), Zu-Ming Jiang (ETH</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/blackbox-fuzzing-of-distributed-systems-with-multi-dimensional-inputs-and-symmetry-based-feedback-pruning/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="blindfold: confidential memory management by untrusted operating system 眼罩：不受信任操作系统的机密记忆管理 caihua li (yale university), seung-seob lee (yale university), lin zhong (yale university)">
+            <div class="paper-number">#92</div>
+            <div class="paper-title-en">Blindfold: Confidential Memory Management by Untrusted Operating System</div>
+            <div class="paper-title-zh">眼罩：不受信任操作系统的机密记忆管理</div>
+            <div class="paper-authors"><strong>作者:</strong> Caihua Li (Yale University), Seung-seob Lee (Yale University), Lin Zhong (Yale University)</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/blindfold-confidential-memory-management-by-untrusted-operating-system/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="caspr: context-aware security policy recommendation caspr：上下文感知安全政策建议 lifang xiao (institute of information engineering, chinese academy of sciences), hanyu wang (institute of">
+            <div class="paper-number">#93</div>
+            <div class="paper-title-en">CASPR: Context-Aware Security Policy Recommendation</div>
+            <div class="paper-title-zh">CASPR：上下文感知安全政策建议</div>
+            <div class="paper-authors"><strong>作者:</strong> Lifang Xiao (Institute of Information Engineering, Chinese Academy of Sciences), Hanyu Wang (Institute of</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="cctag: configurable and combinable tagged architecture cctag：可配置和可组合标记的体系结构 zhanpeng liu (peking university), yi rong (tsinghua university), chenyang li (peking university), wende tan">
+            <div class="paper-number">#94</div>
+            <div class="paper-title-en">CCTAG: Configurable and Combinable Tagged Architecture</div>
+            <div class="paper-title-zh">CCTAG：可配置和可组合标记的体系结构</div>
+            <div class="paper-authors"><strong>作者:</strong> Zhanpeng Liu (Peking University), Yi Rong (Tsinghua University), Chenyang Li (Peking University), Wende Tan</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="characterizing the impact of audio deepfakes in the 表征音频深击的影响 magdalena pasternak (university of florida), kevin warren (university of florida), daniel olszewski (university of">
+            <div class="paper-number">#95</div>
+            <div class="paper-title-en">Characterizing the Impact of Audio Deepfakes in the</div>
+            <div class="paper-title-zh">表征音频深击的影响</div>
+            <div class="paper-authors"><strong>作者:</strong> Magdalena Pasternak (University of Florida), Kevin Warren (University of Florida), Daniel Olszewski (University of</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/characterizing-the-impact-of-audio-deepfakes-in-the-presence-of-cochlear-implant/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="counterseveillance: performance-counter attacks on amd sev-snp 调查助理：对amd sev-snp的性能攻击 stefan gast (graz university of technology), hannes weissteiner (graz university of technology), robin leander">
+            <div class="paper-number">#96</div>
+            <div class="paper-title-en">CounterSEVeillance: Performance-Counter Attacks on AMD SEV-SNP</div>
+            <div class="paper-title-zh">调查助理：对AMD SEV-SNP的性能攻击</div>
+            <div class="paper-authors"><strong>作者:</strong> Stefan Gast (Graz University of Technology), Hannes Weissteiner (Graz University of Technology), Robin Leander</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="crosstalk-induced side channel threats in multi-tenant nisq computers 多租户nisq计算机中的串扰引起的侧渠道威胁 ruixuan li (choudhury), chaithanya naik mude (university of wisconsin-madison), sanjay das (the university of">
+            <div class="paper-number">#97</div>
+            <div class="paper-title-en">Crosstalk-induced Side Channel Threats in Multi-Tenant NISQ Computers</div>
+            <div class="paper-title-zh">多租户NISQ计算机中的串扰引起的侧渠道威胁</div>
+            <div class="paper-authors"><strong>作者:</strong> Ruixuan Li (Choudhury), Chaithanya Naik Mude (University of Wisconsin-Madison), Sanjay Das (The University of</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/crosstalk-induced-side-channel-threats-in-multi-tenant-nisq-computers/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="ctrl+alt+deceive: quantifying user exposure to online scams ctrl+alt+欺骗性：量化用户接触在线骗局 platon kotzias (norton research group, bforeai), michalis pachilakis (norton research group, computer science department">
+            <div class="paper-number">#98</div>
+            <div class="paper-title-en">Ctrl+Alt+Deceive: Quantifying User Exposure to Online Scams</div>
+            <div class="paper-title-zh">Ctrl+Alt+欺骗性：量化用户接触在线骗局</div>
+            <div class="paper-authors"><strong>作者:</strong> Platon Kotzias (Norton Research Group, BforeAI), Michalis Pachilakis (Norton Research Group, Computer Science Department</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="deanonymizing device identities via side-channel attacks in exclusive-use 通过侧通道攻击在独家使用中通过侧向通道攻击进行脱衣化设备身份 christopher ellis (the ohio state university), yue zhang (drexel university), mohit kumar jangid (the">
+            <div class="paper-number">#99</div>
+            <div class="paper-title-en">Deanonymizing Device Identities via Side-channel Attacks in Exclusive-use</div>
+            <div class="paper-title-zh">通过侧通道攻击在独家使用中通过侧向通道攻击进行脱衣化设备身份</div>
+            <div class="paper-authors"><strong>作者:</strong> Christopher Ellis (The Ohio State University), Yue Zhang (Drexel University), Mohit Kumar Jangid (The</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/deanonymizing-device-identities-via-side-channel-attacks-in-exclusive-use-iots-mitigation/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="defending against membership inference attacks on iteratively pruned 防御会员推理对迭代修剪的攻击 jing shang (beijing jiaotong university), jian wang (beijing jiaotong university), kailun wang (beijing jiaotong">
+            <div class="paper-number">#100</div>
+            <div class="paper-title-en">Defending Against Membership Inference Attacks on Iteratively Pruned</div>
+            <div class="paper-title-zh">防御会员推理对迭代修剪的攻击</div>
+            <div class="paper-authors"><strong>作者:</strong> Jing Shang (Beijing Jiaotong University), Jian Wang (Beijing Jiaotong University), Kailun Wang (Beijing Jiaotong</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/defending-against-membership-inference-attacks-on-iteratively-pruned-deep-neural-networks/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="density boosts everything: a one-stop strategy for improving 密度增强了一切：改进的一站式策略 jianwen tian (academy of military sciences), wei kong (zhejiang sci-tech university), debin gao (singapore">
+            <div class="paper-number">#101</div>
+            <div class="paper-title-en">Density Boosts Everything: A One-stop Strategy for Improving</div>
+            <div class="paper-title-zh">密度增强了一切：改进的一站式策略</div>
+            <div class="paper-authors"><strong>作者:</strong> Jianwen Tian (Academy of Military Sciences), Wei Kong (Zhejiang Sci-Tech University), Debin Gao (Singapore</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/density-boosts-everything-a-one-stop-strategy-for-improving-performance-robustness-and-sustainability-of-malware-detectors/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="detecting imsi-catchers by characterizing identity exposing messages in 通过表征揭露消息的身份来检测imsi捕捉器 tyler tucker (university of florida), nathaniel bennett (university of florida), martin kotuliak (eth zurich)">
+            <div class="paper-number">#102</div>
+            <div class="paper-title-en">Detecting IMSI-Catchers by Characterizing Identity Exposing Messages in</div>
+            <div class="paper-title-zh">通过表征揭露消息的身份来检测IMSI捕捉器</div>
+            <div class="paper-authors"><strong>作者:</strong> Tyler Tucker (University of Florida), Nathaniel Bennett (University of Florida), Martin Kotuliak (ETH Zurich)</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/detecting-imsi-catchers-by-characterizing-identity-exposing-messages-in-cellular-traffic/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="detecting ransomware despite i/o overhead: a practical multi-staged 尽管i/o开销，但仍检测勒索软件：实用的多阶段 christian van sloun (rwth aachen university), vincent woeste (rwth aachen university), konrad wolsing (rwth">
+            <div class="paper-number">#103</div>
+            <div class="paper-title-en">Detecting Ransomware Despite I/O Overhead: A Practical Multi-Staged</div>
+            <div class="paper-title-zh">尽管i/o开销，但仍检测勒索软件：实用的多阶段</div>
+            <div class="paper-authors"><strong>作者:</strong> Christian van Sloun (RWTH Aachen University), Vincent Woeste (RWTH Aachen University), Konrad Wolsing (RWTH</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/detecting-ransomware-despite-i-o-overhead-a-practical-multi-staged-approach/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="distefano: decentralized infrastructure for sharing trusted encrypted facts distefano：分散基础架构用于共享可信赖的加密事实 sofia celi (brave software), alex davidson (nova lincs &amp; universidade nova de lisboa), hamed">
+            <div class="paper-number">#104</div>
+            <div class="paper-title-en">DiStefano: Decentralized Infrastructure for Sharing Trusted Encrypted Facts</div>
+            <div class="paper-title-zh">Distefano：分散基础架构用于共享可信赖的加密事实</div>
+            <div class="paper-authors"><strong>作者:</strong> Sofia Celi (Brave Software), Alex Davidson (NOVA LINCS &amp; Universidade NOVA de Lisboa), Hamed</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/distefano-decentralized-infrastructure-for-sharing-trusted-encrypted-facts-and-nothing-more/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="distributed function secret sharing and applications 分布式功能秘密共享和应用程序 pengzhi xing (university of electronic science and technology of china), hongwei li (university of">
+            <div class="paper-number">#105</div>
+            <div class="paper-title-en">Distributed Function Secret Sharing and Applications</div>
+            <div class="paper-title-zh">分布式功能秘密共享和应用程序</div>
+            <div class="paper-authors"><strong>作者:</strong> Pengzhi Xing (University of Electronic Science and Technology of China), Hongwei Li (University of</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="dlbox: new model training framework for protecting training dlbox：保护培训的新模型培训框架 jaewon hur (seoul national university), juheon yi (nokia bell labs, cambridge, uk), cheolwoo myung">
+            <div class="paper-number">#106</div>
+            <div class="paper-title-en">DLBox: New Model Training Framework for Protecting Training</div>
+            <div class="paper-title-zh">DLBOX：保护培训的新模型培训框架</div>
+            <div class="paper-authors"><strong>作者:</strong> Jaewon Hur (Seoul National University), Juheon Yi (Nokia Bell Labs, Cambridge, UK), Cheolwoo Myung</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="do (not) follow the white rabbit: challenging the （不）遵循白兔子：挑战 soheil khodayari (cispa helmholtz center for information security), kai glauber (saarland university), giancarlo pellegrino">
+            <div class="paper-number">#107</div>
+            <div class="paper-title-en">Do (Not) Follow the White Rabbit: Challenging the</div>
+            <div class="paper-title-zh">（不）遵循白兔子：挑战</div>
+            <div class="paper-authors"><strong>作者:</strong> Soheil Khodayari (CISPA Helmholtz Center for Information Security), Kai Glauber (Saarland University), Giancarlo Pellegrino</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/do-not-follow-the-white-rabbit-challenging-the-myth-of-harmless-open-redirection/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="do we really need to design new byzantine-robust 我们真的需要设计新的拜占庭式啤酒 minghong fang (university of louisville), seyedsina nabavirazavi (florida international university), zhuqing liu (university of">
+            <div class="paper-number">#108</div>
+            <div class="paper-title-en">Do We Really Need to Design New Byzantine-robust</div>
+            <div class="paper-title-zh">我们真的需要设计新的拜占庭式啤酒</div>
+            <div class="paper-authors"><strong>作者:</strong> Minghong Fang (University of Louisville), Seyedsina Nabavirazavi (Florida International University), Zhuqing Liu (University of</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/do-we-really-need-to-design-new-byzantine-robust-aggregation-rules/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="dshield: defending against backdoor attacks on graph neural dshield：防御图神经的后门攻击 hao yu (national university of defense technology), chuan ma (chongqing university), xinhang wan (national">
+            <div class="paper-number">#109</div>
+            <div class="paper-title-en">DShield: Defending against Backdoor Attacks on Graph Neural</div>
+            <div class="paper-title-zh">DShield：防御图神经的后门攻击</div>
+            <div class="paper-authors"><strong>作者:</strong> Hao Yu (National University of Defense Technology), Chuan Ma (Chongqing University), Xinhang Wan (National</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/dshield-defending-against-backdoor-attacks-on-graph-neural-networks-via-discrepancy-learning/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="dumpling: fine-grained differential javascript engine fuzzing 饺子：细粒度的差异javascript引擎模糊 liam wachter (epfl), julian gremminger (epfl), christian wressnegger (karlsruhe institute of technology (kit)), mathias">
+            <div class="paper-number">#110</div>
+            <div class="paper-title-en">DUMPLING: Fine-grained Differential JavaScript Engine Fuzzing</div>
+            <div class="paper-title-zh">饺子：细粒度的差异JavaScript引擎模糊</div>
+            <div class="paper-authors"><strong>作者:</strong> Liam Wachter (EPFL), Julian Gremminger (EPFL), Christian Wressnegger (Karlsruhe Institute of Technology (KIT)), Mathias</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="eagleye: exposing hidden web interfaces in iot devices eagleye：在iot设备中揭露隐藏的web接口 hangtian liu (information engineering university), lei zheng (institute for network sciences and cyberspace (insc)">
+            <div class="paper-number">#111</div>
+            <div class="paper-title-en">EAGLEYE: Exposing Hidden Web Interfaces in IoT Devices</div>
+            <div class="paper-title-zh">Eagleye：在IoT设备中揭露隐藏的Web接口</div>
+            <div class="paper-authors"><strong>作者:</strong> Hangtian Liu (Information Engineering University), Lei Zheng (Institute for Network Sciences and Cyberspace (INSC)</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/eagleye-exposing-hidden-web-interfaces-in-iot-devices-via-routing-analysis/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="eclipse attacks on monero&#x27;s peer-to-peer network 日食攻击monero的点对点网络 ruisheng shi (beijing university of posts and telecommunications), zhiyuan peng (beijing university of posts">
+            <div class="paper-number">#112</div>
+            <div class="paper-title-en">Eclipse Attacks on Monero&#x27;s Peer-to-Peer Network</div>
+            <div class="paper-title-zh">日食攻击Monero的点对点网络</div>
+            <div class="paper-authors"><strong>作者:</strong> Ruisheng Shi (Beijing University of Posts and Telecommunications), Zhiyuan Peng (Beijing University of Posts</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/eclipse-attacks-on-moneros-peer-to-peer-network/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="emiris: eavesdropping on iris information via electromagnetic side emiris：通过电磁侧窃听虹膜信息 wenhao li (shandong university), jiahao wang (shandong university), guoming zhang (shandong university), yanni yang">
+            <div class="paper-number">#113</div>
+            <div class="paper-title-en">EMIRIS: Eavesdropping on Iris Information via Electromagnetic Side</div>
+            <div class="paper-title-zh">Emiris：通过电磁侧窃听虹膜信息</div>
+            <div class="paper-authors"><strong>作者:</strong> Wenhao Li (Shandong University), Jiahao Wang (Shandong University), Guoming Zhang (Shandong University), Yanni Yang</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/emiris-eavesdropping-on-iris-information-via-electromagnetic-side-channel/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="enhancing security in third-party library reuse 增强第三方库重用中的安全性 shangzhi xu (the university of new south wales), jialiang dong (the university of new">
+            <div class="paper-number">#114</div>
+            <div class="paper-title-en">Enhancing Security in Third-Party Library Reuse</div>
+            <div class="paper-title-zh">增强第三方库重用中的安全性</div>
+            <div class="paper-authors"><strong>作者:</strong> Shangzhi Xu (The University of New South Wales), Jialiang Dong (The University of New</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/enhancing-security-in-third-party-library-reuse-comprehensive-detection-of-1-day-vulnerability-through-code-patch-analysis/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="evaluating machine learning-based iot device identification models for 评估基于机器学习的物联网设备识别模型 eman maali (imperial college london), omar alrawi (georgia institute of technology), julie mccann (imperial">
+            <div class="paper-number">#115</div>
+            <div class="paper-title-en">Evaluating Machine Learning-Based IoT Device Identification Models for</div>
+            <div class="paper-title-zh">评估基于机器学习的物联网设备识别模型</div>
+            <div class="paper-authors"><strong>作者:</strong> Eman Maali (Imperial College London), Omar Alrawi (Georgia Institute of Technology), Julie McCann (Imperial</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/evaluating-machine-learning-based-iot-device-identification-models-for-security-applications/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="exploring user perceptions of security auditing in the 探索用户对安全审核的看法 molly zhuangtong huang (university of macau), rui jiang (university of macau), tanusree sharma (pennsylvania">
+            <div class="paper-number">#116</div>
+            <div class="paper-title-en">Exploring User Perceptions of Security Auditing in the</div>
+            <div class="paper-title-zh">探索用户对安全审核的看法</div>
+            <div class="paper-authors"><strong>作者:</strong> Molly Zhuangtong Huang (University of Macau), Rui Jiang (University of Macau), Tanusree Sharma (Pennsylvania</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/exploring-user-perceptions-of-security-auditing-in-the-web3-ecosystem/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="from large to mammoth: a comparative evaluation of 从大到猛mm象：比较评估 jie lin (university of central florida), david mohaisen (university of central florida)">
+            <div class="paper-number">#117</div>
+            <div class="paper-title-en">From Large to Mammoth: A Comparative Evaluation of</div>
+            <div class="paper-title-zh">从大到猛mm象：比较评估</div>
+            <div class="paper-authors"><strong>作者:</strong> Jie Lin (University of Central Florida), David Mohaisen (University of Central Florida)</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/from-large-to-mammoth-a-comparative-evaluation-of-large-language-models-in-vulnerability-detection/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="fuzzuer: enabling fuzzing of uefi interfaces on edk-2 fuzzuer：在edk-2上启用uefi接口的模糊 connor glosner (purdue university), aravind machiry (purdue university)">
+            <div class="paper-number">#118</div>
+            <div class="paper-title-en">FUZZUER: Enabling Fuzzing of UEFI Interfaces on EDK-2</div>
+            <div class="paper-title-zh">Fuzzuer：在EDK-2上启用UEFI接口的模糊</div>
+            <div class="paper-authors"><strong>作者:</strong> Connor Glosner (Purdue University), Aravind Machiry (Purdue University)</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="gadgetmeter: quantitatively and accurately gauging the exploitability of 小工具表：定量，准确地衡量可剥削性 qi ling (purdue university), yujun liang (tsinghua university), yi ren (tsinghua university), baris kasikci">
+            <div class="paper-number">#119</div>
+            <div class="paper-title-en">GadgetMeter: Quantitatively and Accurately Gauging the Exploitability of</div>
+            <div class="paper-title-zh">小工具表：定量，准确地衡量可剥削性</div>
+            <div class="paper-authors"><strong>作者:</strong> Qi Ling (Purdue University), Yujun Liang (Tsinghua University), Yi Ren (Tsinghua University), Baris Kasikci</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/gadgetmeter-quantitatively-and-accurately-gauging-the-exploitability-of-speculative-gadgets/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="gap-diff: protecting jpeg-compressed images from diffusion-based facial customization gap-diff：保护jpeg压缩图像免受基于扩散的面部定制 haotian zhu (nanjing university of science and technology), shuchao pang (nanjing university of science">
+            <div class="paper-number">#120</div>
+            <div class="paper-title-en">GAP-Diff: Protecting JPEG-Compressed Images from Diffusion-based Facial Customization</div>
+            <div class="paper-title-zh">GAP-DIFF：保护JPEG压缩图像免受基于扩散的面部定制</div>
+            <div class="paper-authors"><strong>作者:</strong> Haotian Zhu (Nanjing University of Science and Technology), Shuchao Pang (Nanjing University of Science</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/gap-diff-protecting-jpeg-compressed-images-from-diffusion-based-facial-customization/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="ghostshot: manipulating the image of ccd cameras with ghostshot：操纵ccd摄像机的图像 yanze ren (zhejiang university), qinhong jiang (zhejiang university), chen yan (zhejiang university), xiaoyu ji">
+            <div class="paper-number">#121</div>
+            <div class="paper-title-en">GhostShot: Manipulating the Image of CCD Cameras with</div>
+            <div class="paper-title-zh">Ghostshot：操纵CCD摄像机的图像</div>
+            <div class="paper-authors"><strong>作者:</strong> Yanze Ren (Zhejiang University), Qinhong Jiang (Zhejiang University), Chen Yan (Zhejiang University), Xiaoyu Ji</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/ghostshot-manipulating-the-image-of-ccd-cameras-with-electromagnetic-interference/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="hades attack: understanding and evaluating manipulation risks of hades攻击：理解和评估操纵风险 ruixuan li (tsinghua university), chaoyi lu (tsinghua university), baojun liu (tsinghua university;zhongguancun laboratory), yunyi">
+            <div class="paper-number">#122</div>
+            <div class="paper-title-en">HADES Attack: Understanding and Evaluating Manipulation Risks of</div>
+            <div class="paper-title-zh">hades攻击：理解和评估操纵风险</div>
+            <div class="paper-authors"><strong>作者:</strong> Ruixuan Li (Tsinghua University), Chaoyi Lu (Tsinghua University), Baojun Liu (Tsinghua University;Zhongguancun Laboratory), Yunyi</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/hades-attack-understanding-and-evaluating-manipulation-risks-of-email-blocklists/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="hidden and lost control: on security design risks 隐藏和丢失的控制：安全设计风险 haoqiang wang, yiwei fang (institute of information engineering, chinese academy of sciences; school of">
+            <div class="paper-number">#123</div>
+            <div class="paper-title-en">Hidden and Lost Control: on Security Design Risks</div>
+            <div class="paper-title-zh">隐藏和丢失的控制：安全设计风险</div>
+            <div class="paper-authors"><strong>作者:</strong> Haoqiang Wang, Yiwei Fang (Institute of Information Engineering, Chinese Academy of Sciences; School of</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/hidden-and-lost-control-on-security-design-risks-in-iot-user-facing-matter-controller/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="hitchhiking vaccine: enhancing botnet remediation with remote code 搭便车疫苗：用远程代码增强僵尸网络修复 runze zhang (georgia institute of technology), mingxuan yao (georgia institute of technology), haichuan xu">
+            <div class="paper-number">#124</div>
+            <div class="paper-title-en">Hitchhiking Vaccine: Enhancing Botnet Remediation With Remote Code</div>
+            <div class="paper-title-zh">搭便车疫苗：用远程代码增强僵尸网络修复</div>
+            <div class="paper-authors"><strong>作者:</strong> Runze Zhang (Georgia Institute of Technology), Mingxuan Yao (Georgia Institute of Technology), Haichuan Xu</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/hitchhiking-vaccine-enhancing-botnet-remediation-with-remote-code-deployment-reuse/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="i know what you asked: prompt leakage via 我知道你问什么：提示通过 guanlong wu (southern university of science and technology), zheng zhang (bytedance inc.), yao zhang">
+            <div class="paper-number">#125</div>
+            <div class="paper-title-en">I Know What You Asked: Prompt Leakage via</div>
+            <div class="paper-title-zh">我知道你问什么：提示通过</div>
+            <div class="paper-authors"><strong>作者:</strong> Guanlong Wu (Southern University of Science and Technology), Zheng Zhang (ByteDance Inc.), Yao Zhang</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/i-know-what-you-asked-prompt-leakage-via-kv-cache-sharing-in-multi-tenant-llm-serving/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="i know what you meme! understanding and detecting 我知道你的模因！理解和检测 yong zhuang (wuhan university), keyan guo (university at buffalo), juan wang (wuhan university), yiheng">
+            <div class="paper-number">#126</div>
+            <div class="paper-title-en">I know what you MEME! Understanding and Detecting</div>
+            <div class="paper-title-zh">我知道你的模因！理解和检测</div>
+            <div class="paper-authors"><strong>作者:</strong> Yong Zhuang (Wuhan University), Keyan Guo (University at Buffalo), Juan Wang (Wuhan University), Yiheng</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/i-know-what-you-meme-understanding-and-detecting-harmful-memes-with-multimodal-large-language-models/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="icsquartz: scan cycle-aware and vendor-agnostic fuzzing for industrial icsquartz：扫描周期意识和供应商 - 不合时宜的工业模糊 corban villa (new york university abu dhabi), constantine doumanidis (new york university abu dhabi)">
+            <div class="paper-number">#127</div>
+            <div class="paper-title-en">ICSQuartz: Scan Cycle-Aware and Vendor-Agnostic Fuzzing for Industrial</div>
+            <div class="paper-title-zh">ICSQUARTZ：扫描周期意识和供应商 - 不合时宜的工业模糊</div>
+            <div class="paper-authors"><strong>作者:</strong> Corban Villa (New York University Abu Dhabi), Constantine Doumanidis (New York University Abu Dhabi)</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/icsquartz-scan-cycle-aware-and-vendor-agnostic-fuzzing-for-industrial-control-systems/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="impact tracing: identifying the culprit of misinformation in 影响追踪：确定造成错误信息的罪魁祸首 zhongming wang (chongqing university), tao xiang (chongqing university), xiaoguo li (chongqing university), biwen chen">
+            <div class="paper-number">#128</div>
+            <div class="paper-title-en">Impact Tracing: Identifying the Culprit of Misinformation in</div>
+            <div class="paper-title-zh">影响追踪：确定造成错误信息的罪魁祸首</div>
+            <div class="paper-authors"><strong>作者:</strong> Zhongming Wang (Chongqing University), Tao Xiang (Chongqing University), Xiaoguo Li (Chongqing University), Biwen Chen</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/impact-tracing-identifying-the-culprit-of-misinformation-in-encrypted-messaging-systems/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="interventional root cause analysis of failures in multi-sensor 介入的根本原因分析多传感器中的故障 shuguang wang (city university of hong kong), qian zhou (city university of hong kong)">
+            <div class="paper-number">#129</div>
+            <div class="paper-title-en">Interventional Root Cause Analysis of Failures in Multi-Sensor</div>
+            <div class="paper-title-zh">介入的根本原因分析多传感器中的故障</div>
+            <div class="paper-authors"><strong>作者:</strong> Shuguang Wang (City University of Hong Kong), Qian Zhou (City University of Hong Kong)</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/interventional-root-cause-analysis-of-failures-in-multi-sensor-fusion-perception-systems/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="iris: dynamic privacy preserving search in authenticated chord 虹膜：在经过身份验证的和弦中保存搜索的动态隐私 angeliki aktypi (university of oxford), kasper rasmussen (university of oxford)">
+            <div class="paper-number">#130</div>
+            <div class="paper-title-en">Iris: Dynamic Privacy Preserving Search in Authenticated Chord</div>
+            <div class="paper-title-zh">虹膜：在经过身份验证的和弦中保存搜索的动态隐私</div>
+            <div class="paper-authors"><strong>作者:</strong> Angeliki Aktypi (University of Oxford), Kasper Rasmussen (University of Oxford)</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/iris-dynamic-privacy-preserving-search-in-authenticated-chord-peer-to-peer-networks/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="isolategpt: an execution isolation architecture for llm-based agentic 隔离式：基于llm的代理的执行隔离体系结构 yuhao wu (washington university in st. louis), franziska roesner (university of washington), tadayoshi kohno">
+            <div class="paper-number">#131</div>
+            <div class="paper-title-en">IsolateGPT: An Execution Isolation Architecture for LLM-Based Agentic</div>
+            <div class="paper-title-zh">隔离式：基于LLM的代理的执行隔离体系结构</div>
+            <div class="paper-authors"><strong>作者:</strong> Yuhao Wu (Washington University in St. Louis), Franziska Roesner (University of Washington), Tadayoshi Kohno</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/isolategpt-an-execution-isolation-architecture-for-llm-based-agentic-systems/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="jbomaudit: assessing the landscape, compliance, and security implications jbomaudit：评估景观，合规性和安全性影响 yue xiao (ibm research), dhilung kirat (ibm research), douglas lee schales (ibm research), jiyong">
+            <div class="paper-number">#132</div>
+            <div class="paper-title-en">JBomAudit: Assessing the Landscape, Compliance, and Security Implications</div>
+            <div class="paper-title-zh">Jbomaudit：评估景观，合规性和安全性影响</div>
+            <div class="paper-authors"><strong>作者:</strong> Yue Xiao (IBM Research), Dhilung Kirat (IBM Research), Douglas Lee Schales (IBM Research), Jiyong</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/jbomaudit-assessing-the-landscape-compliance-and-security-implications-of-java-sboms/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="kernelsnitch: side channel-attacks on kernel data structures kernelsnitch：内核数据结构的侧渠道攻击 lukas maar (graz university of technology), jonas juffinger (graz university of technology), thomas steinbauer">
+            <div class="paper-number">#133</div>
+            <div class="paper-title-en">KernelSnitch: Side Channel-Attacks on Kernel Data Structures</div>
+            <div class="paper-title-zh">kernelsnitch：内核数据结构的侧渠道攻击</div>
+            <div class="paper-authors"><strong>作者:</strong> Lukas Maar (Graz University of Technology), Jonas Juffinger (Graz University of Technology), Thomas Steinbauer</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="l-hawk: a controllable physical adversarial patch against a l-hawk：可控的物理对抗贴片 taifeng liu (xidian university), yang liu (xidian university), zhuo ma (xidian university), tong yang">
+            <div class="paper-number">#134</div>
+            <div class="paper-title-en">L-HAWK: A Controllable Physical Adversarial Patch Against a</div>
+            <div class="paper-title-zh">L-HAWK：可控的物理对抗贴片</div>
+            <div class="paper-authors"><strong>作者:</strong> Taifeng Liu (Xidian University), Yang Liu (Xidian University), Zhuo Ma (Xidian University), Tong Yang</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/l-hawk-a-controllable-physical-adversarial-patch-against-a-long-distance-target/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="ladder: multi-objective backdoor attack via evolutionary algorithm 梯子：通过进化算法的多目标后门攻击 dazhuang liu (delft university of technology), yanqi qiao (delft university of technology), rui wang">
+            <div class="paper-number">#135</div>
+            <div class="paper-title-en">LADDER: Multi-Objective Backdoor Attack via Evolutionary Algorithm</div>
+            <div class="paper-title-zh">梯子：通过进化算法的多目标后门攻击</div>
+            <div class="paper-authors"><strong>作者:</strong> Dazhuang Liu (Delft University of Technology), Yanqi Qiao (Delft University of Technology), Rui Wang</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="lamp: lightweight approaches for latency minimization in mixnets 灯：轻巧的方法最小化混合网的潜伏期 mahdi rahimi (ku leuven), piyush kumar sharma (university of michigan), claudia diaz (ku leuven)">
+            <div class="paper-number">#136</div>
+            <div class="paper-title-en">LAMP: Lightweight Approaches for Latency Minimization in Mixnets</div>
+            <div class="paper-title-zh">灯：轻巧的方法最小化混合网的潜伏期</div>
+            <div class="paper-authors"><strong>作者:</strong> Mahdi Rahimi (KU Leuven), Piyush Kumar Sharma (University of Michigan), Claudia Diaz (KU Leuven)</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/lamp-lightweight-approaches-for-latency-minimization-in-mixnets-with-practical-deployment-considerations/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="lend me your beam: privacy implications of plaintext 借给我你的光束：授权的隐私影响 rui xiao (zhejiang university), xiankai chen (zhejiang university), yinghui he (nanyang technological university), jun">
+            <div class="paper-number">#137</div>
+            <div class="paper-title-en">Lend Me Your Beam: Privacy Implications of Plaintext</div>
+            <div class="paper-title-zh">借给我你的光束：授权的隐私影响</div>
+            <div class="paper-authors"><strong>作者:</strong> Rui Xiao (Zhejiang University), Xiankai Chen (Zhejiang University), Yinghui He (Nanyang Technological University), Jun</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/lend-me-your-beam-privacy-implications-of-plaintext-beamforming-feedback-in-wifi/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="lightantenna: characterizing the limits of fluorescent lamp-induced electromagnetic lightantenna：表征荧光灯诱导的电磁的极限 fengchen yang (zhejiang university), wenze cui (zhejiang university), xinfeng li (zhejiang university), chen yan">
+            <div class="paper-number">#138</div>
+            <div class="paper-title-en">LightAntenna: Characterizing the Limits of Fluorescent Lamp-Induced Electromagnetic</div>
+            <div class="paper-title-zh">Lightantenna：表征荧光灯诱导的电磁的极限</div>
+            <div class="paper-authors"><strong>作者:</strong> Fengchen Yang (Zhejiang University), Wenze Cui (Zhejiang University), Xinfeng Li (Zhejiang University), Chen Yan</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/lightantenna-characterizing-the-limits-of-fluorescent-lamp-induced-electromagnetic-interference/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="llmpirate: llms for black-box hardware ip piracy llmpirate：黑盒硬件ip盗版的llms vasudev gohil (texas a&amp;m university), matthew delorenzo (texas a&amp;m university), veera vishwa achuta sai">
+            <div class="paper-number">#139</div>
+            <div class="paper-title-en">LLMPirate: LLMs for Black-box Hardware IP Piracy</div>
+            <div class="paper-title-zh">llmpirate：黑盒硬件IP盗版的LLMS</div>
+            <div class="paper-authors"><strong>作者:</strong> Vasudev Gohil (Texas A&amp;M University), Matthew DeLorenzo (Texas A&amp;M University), Veera Vishwa Achuta Sai</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/llmpirate-llms-for-black-box-hardware-ip-piracy/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="mingledpie: a cluster mingling approach for mitigating preference mingledpie：一种用于缓解偏好的聚类混合方法 cheng zhang (hunan university), yang xu (hunan university), jianghao tan (hunan university), jiajie an">
+            <div class="paper-number">#140</div>
+            <div class="paper-title-en">MingledPie: A Cluster Mingling Approach for Mitigating Preference</div>
+            <div class="paper-title-zh">MingledPie：一种用于缓解偏好的聚类混合方法</div>
+            <div class="paper-authors"><strong>作者:</strong> Cheng Zhang (Hunan University), Yang Xu (Hunan University), Jianghao Tan (Hunan University), Jiajie An</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/mingledpie-a-cluster-mingling-approach-for-mitigating-preference-profiling-in-cfl/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="mysticeti: reaching the latency limits with uncertified dags mysticeti：使用未认证的dag达到延迟极限 kushal babel (cornell tech &amp; ic3), andrey chursin (mysten labs), george danezis (mysten labs">
+            <div class="paper-number">#141</div>
+            <div class="paper-title-en">Mysticeti: Reaching the Latency Limits with Uncertified DAGs</div>
+            <div class="paper-title-zh">Mysticeti：使用未认证的DAG达到延迟极限</div>
+            <div class="paper-authors"><strong>作者:</strong> Kushal Babel (Cornell Tech &amp; IC3), Andrey Chursin (Mysten Labs), George Danezis (Mysten Labs</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="nodemedic-fine: automatic detection and exploit synthesis for node.js nodemedic-fine：自动检测和利用node.js的合成 darion cassel (carnegie mellon university), nuno sabino (ist &amp; cmu), min-chien hsu (carnegie mellon">
+            <div class="paper-number">#142</div>
+            <div class="paper-title-en">NodeMedic-FINE: Automatic Detection and Exploit Synthesis for Node.js</div>
+            <div class="paper-title-zh">nodemedic-fine：自动检测和利用node.js的合成</div>
+            <div class="paper-authors"><strong>作者:</strong> Darion Cassel (Carnegie Mellon University), Nuno Sabino (IST &amp; CMU), Min-Chien Hsu (Carnegie Mellon</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/nodemedic-fine-automatic-detection-and-exploit-synthesis-for-node-js-vulnerabilities/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="non-intrusive and unconstrained keystroke inference in vr platforms vr平台中的非侵入和无约束的击键推断 tao ni (city university of hong kong), yuefeng du (city university of hong kong)">
+            <div class="paper-number">#143</div>
+            <div class="paper-title-en">Non-intrusive and Unconstrained Keystroke Inference in VR Platforms</div>
+            <div class="paper-title-zh">VR平台中的非侵入和无约束的击键推断</div>
+            <div class="paper-authors"><strong>作者:</strong> Tao Ni (City University of Hong Kong), Yuefeng Du (City University of Hong Kong)</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/non-intrusive-and-unconstrained-keystroke-inference-in-vr-platforms-via-infrared-side-channel/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="on borrowed time â 在借来的时间 robert dumitru (ruhr university bochum and the university of adelaide), thorben moos (uclouvain), andrew">
+            <div class="paper-number">#144</div>
+            <div class="paper-title-en">On Borrowed Time â</div>
+            <div class="paper-title-zh">在借来的时间</div>
+            <div class="paper-authors"><strong>作者:</strong> Robert Dumitru (Ruhr University Bochum and The University of Adelaide), Thorben Moos (UCLouvain), Andrew</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="on the robustness of ldp protocols for numerical 关于数值的ldp协议的鲁棒性 xiaoguang li (xidian university, purdue university), zitao li (alibaba group (u.s.) inc.), ninghui li">
+            <div class="paper-number">#145</div>
+            <div class="paper-title-en">On the Robustness of LDP Protocols for Numerical</div>
+            <div class="paper-title-zh">关于数值的LDP协议的鲁棒性</div>
+            <div class="paper-authors"><strong>作者:</strong> Xiaoguang Li (Xidian University, Purdue University), Zitao Li (Alibaba Group (U.S.) Inc.), Ninghui Li</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/on-the-robustness-of-ldp-protocols-for-numerical-attributes-under-data-poisoning-attacks/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="onion franking: abuse reports for mix-based private messaging 洋葱弗兰金：基于混音的私人消息的滥用报告 matthew gregoire (university of north carolina at chapel hill), margaret pierce (university of north">
+            <div class="paper-number">#146</div>
+            <div class="paper-title-en">Onion Franking: Abuse Reports for Mix-Based Private Messaging</div>
+            <div class="paper-title-zh">洋葱弗兰金：基于混音的私人消息的滥用报告</div>
+            <div class="paper-authors"><strong>作者:</strong> Matthew Gregoire (University of North Carolina at Chapel Hill), Margaret Pierce (University of North</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="oreo: protecting aslr against microarchitectural attacks 奥利奥：保护aslr免受微构造攻击 shixin song (massachusetts institute of technology), joseph zhang (massachusetts institute of technology), mengjia yan">
+            <div class="paper-number">#147</div>
+            <div class="paper-title-en">Oreo: Protecting ASLR Against Microarchitectural Attacks</div>
+            <div class="paper-title-zh">奥利奥：保护ASLR免受微构造攻击</div>
+            <div class="paper-authors"><strong>作者:</strong> Shixin Song (Massachusetts Institute of Technology), Joseph Zhang (Massachusetts Institute of Technology), Mengjia Yan</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="pbp: post-training backdoor purification for malware classifiers pbp：恶意软件分类器的培训后的后门净化 dung thuy nguyen (vanderbilt university), ngoc n. tran (vanderbilt university), taylor t. johnson (vanderbilt">
+            <div class="paper-number">#148</div>
+            <div class="paper-title-en">PBP: Post-training Backdoor Purification for Malware Classifiers</div>
+            <div class="paper-title-zh">PBP：恶意软件分类器的培训后的后门净化</div>
+            <div class="paper-authors"><strong>作者:</strong> Dung Thuy Nguyen (Vanderbilt University), Ngoc N. Tran (Vanderbilt University), Taylor T. Johnson (Vanderbilt</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="policypulse: precision semantic role extraction for enhanced privacy policypulse：精确的语义角色提取以增强隐私 andrick adhikari (university of denver), sanchari das (university of denver), rinku dewri (university of">
+            <div class="paper-number">#149</div>
+            <div class="paper-title-en">PolicyPulse: Precision Semantic Role Extraction for Enhanced Privacy</div>
+            <div class="paper-title-zh">Policypulse：精确的语义角色提取以增强隐私</div>
+            <div class="paper-authors"><strong>作者:</strong> Andrick Adhikari (University of Denver), Sanchari Das (University of Denver), Rinku Dewri (University of</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/policypulse-precision-semantic-role-extraction-for-enhanced-privacy-policy-comprehension/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="power-related side-channel attacks using the android sensor framework 使用android传感器框架进行与功率相关的侧通道攻击 mathias oberhuber (graz university of technology), martin unterguggenberger (graz university of technology), lukas maar">
+            <div class="paper-number">#150</div>
+            <div class="paper-title-en">Power-Related Side-Channel Attacks using the Android Sensor Framework</div>
+            <div class="paper-title-zh">使用Android传感器框架进行与功率相关的侧通道攻击</div>
+            <div class="paper-authors"><strong>作者:</strong> Mathias Oberhuber (Graz University of Technology), Martin Unterguggenberger (Graz University of Technology), Lukas Maar</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/power-related-side-channel-attacks-using-the-android-sensor-framework/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="pqconnect: automated post-quantum end-to-end tunnels pqconnect：自动化后quantum端到端隧道 daniel j. bernstein (university of illinois at chicago and academia sinica), tanja lange (eindhoven">
+            <div class="paper-number">#151</div>
+            <div class="paper-title-en">PQConnect: Automated Post-Quantum End-to-End Tunnels</div>
+            <div class="paper-title-zh">PQCONNECT：自动化后Quantum端到端隧道</div>
+            <div class="paper-authors"><strong>作者:</strong> Daniel J. Bernstein (University of Illinois at Chicago and Academia Sinica), Tanja Lange (Eindhoven</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="privacy-preserving data deduplication for enhancing federated learning of 隐私保护数据重复数据删除，以增强联合学习 aydin abadi (newcastle university), vishnu asutosh dasu (pennsylvania state university), sumanta sarkar (university of">
+            <div class="paper-number">#152</div>
+            <div class="paper-title-en">Privacy-Preserving Data Deduplication for Enhancing Federated Learning of</div>
+            <div class="paper-title-zh">隐私保护数据重复数据删除，以增强联合学习</div>
+            <div class="paper-authors"><strong>作者:</strong> Aydin Abadi (Newcastle University), Vishnu Asutosh Dasu (Pennsylvania State University), Sumanta Sarkar (University of</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/privacy-preserving-data-deduplication-for-enhancing-federated-learning-of-language-models/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="probe-me-not: protecting pre-trained encoders from malicious probing 探测器 - 我不是：保护预训练的编码器免受恶意探测 ruyi ding (northeastern university), tong zhou (northeastern university), lili su (northeastern university), aidong adam">
+            <div class="paper-number">#153</div>
+            <div class="paper-title-en">Probe-Me-Not: Protecting Pre-trained Encoders from Malicious Probing</div>
+            <div class="paper-title-zh">探测器 - 我不是：保护预训练的编码器免受恶意探测</div>
+            <div class="paper-authors"><strong>作者:</strong> Ruyi Ding (Northeastern University), Tong Zhou (Northeastern University), Lili Su (Northeastern University), Aidong Adam</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/probe-me-not-protecting-pre-trained-encoders-from-malicious-probing/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="propertygpt: llm-driven formal verification of smart contracts through 物业游戏：通过llm驱动的正式验证智能合约 ye liu (singapore management university), yue xue (metatrust labs), daoyuan wu (the hong kong">
+            <div class="paper-number">#154</div>
+            <div class="paper-title-en">PropertyGPT: LLM-driven Formal Verification of Smart Contracts through</div>
+            <div class="paper-title-zh">物业游戏：通过LLM驱动的正式验证智能合约</div>
+            <div class="paper-authors"><strong>作者:</strong> Ye Liu (Singapore Management University), Yue Xue (MetaTrust Labs), Daoyuan Wu (The Hong Kong</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/propertygpt-llm-driven-formal-verification-of-smart-contracts-through-retrieval-augmented-property-generation/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="provably unlearnable data examples 可证明的数据示例 derui wang (csiro&#x27;s data61), minhui xue (csiro&#x27;s data61), bo li (the university of chicago)">
+            <div class="paper-number">#155</div>
+            <div class="paper-title-en">Provably Unlearnable Data Examples</div>
+            <div class="paper-title-zh">可证明的数据示例</div>
+            <div class="paper-authors"><strong>作者:</strong> Derui Wang (CSIRO&#x27;s Data61), Minhui Xue (CSIRO&#x27;s Data61), Bo Li (The University of Chicago)</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/provably-unlearnable-data-examples/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="provguard: detecting sdn control policy manipulation via contextual 守卫者：通过上下文检测sdn控制策略操纵 ziwen liu (beihang university), jian mao (beihang university; tianmushan laboratory; hangzhou innovation institute, beihang">
+            <div class="paper-number">#156</div>
+            <div class="paper-title-en">ProvGuard: Detecting SDN Control Policy Manipulation via Contextual</div>
+            <div class="paper-title-zh">守卫者：通过上下文检测SDN控制策略操纵</div>
+            <div class="paper-authors"><strong>作者:</strong> Ziwen Liu (Beihang University), Jian Mao (Beihang University; Tianmushan Laboratory; Hangzhou Innovation Institute, Beihang</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/provguard-detecting-sdn-control-policy-manipulation-via-contextual-semantics-of-provenance-graphs/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="qmsan: efficiently detecting uninitialized memory errors during fuzzing qmsan：在模糊过程中有效检测到非初始化的内存错误 matteo marini (sapienza university of rome), daniele cono d&#x27;elia (sapienza university of rome), mathias">
+            <div class="paper-number">#157</div>
+            <div class="paper-title-en">QMSan: Efficiently Detecting Uninitialized Memory Errors During Fuzzing</div>
+            <div class="paper-title-zh">QMSAN：在模糊过程中有效检测到非初始化的内存错误</div>
+            <div class="paper-authors"><strong>作者:</strong> Matteo Marini (Sapienza University of Rome), Daniele Cono D&#x27;Elia (Sapienza University of Rome), Mathias</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/qmsan-efficiently-detecting-uninitialized-memory-errors-during-fuzzing/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="raifle: reconstruction attacks on interaction-based federated learning with 钢铁：基于互动的联邦学习的重建攻击 dzung pham (university of massachusetts amherst), shreyas kulkarni (university of massachusetts amherst), amir houmansadr">
+            <div class="paper-number">#158</div>
+            <div class="paper-title-en">RAIFLE: Reconstruction Attacks on Interaction-based Federated Learning with</div>
+            <div class="paper-title-zh">钢铁：基于互动的联邦学习的重建攻击</div>
+            <div class="paper-authors"><strong>作者:</strong> Dzung Pham (University of Massachusetts Amherst), Shreyas Kulkarni (University of Massachusetts Amherst), Amir Houmansadr</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/raifle-reconstruction-attacks-on-interaction-based-federated-learning-with-adversarial-data-manipulation/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="rcontainer: a secure container architecture through extending arm rcontainer：通过伸出手臂的安全容器架构 qihang zhou (institute of information engineering, chinese academy of sciences), wenzhuo cao (institute of">
+            <div class="paper-number">#159</div>
+            <div class="paper-title-en">RContainer: A Secure Container Architecture through Extending ARM</div>
+            <div class="paper-title-zh">rcontainer：通过伸出手臂的安全容器架构</div>
+            <div class="paper-authors"><strong>作者:</strong> Qihang Zhou (Institute of Information Engineering, Chinese Academy of Sciences), Wenzhuo Cao (Institute of</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/rcontainer-a-secure-container-architecture-through-extending-arm-cca-hardware-primitives/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="recurrent private set intersection for unbalanced databases with 不平衡数据库的经常性私人集交点 eduardo chielle (new york university abu dhabi), michail maniatakos (new york university abu dhabi)">
+            <div class="paper-number">#160</div>
+            <div class="paper-title-en">Recurrent Private Set Intersection for Unbalanced Databases with</div>
+            <div class="paper-title-zh">不平衡数据库的经常性私人集交点</div>
+            <div class="paper-authors"><strong>作者:</strong> Eduardo Chielle (New York University Abu Dhabi), Michail Maniatakos (New York University Abu Dhabi)</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/recurrent-private-set-intersection-for-unbalanced-databases-with-cuckoo-hashing-and-leveled-fhe/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="rediscovering method confusion in proposed security fixes for 在提议的安全修复程序中重新发现方法混乱 maximilian von tschirschnitz (technical university of munich), ludwig peuckert (technical university of munich), moritz">
+            <div class="paper-number">#161</div>
+            <div class="paper-title-en">Rediscovering Method Confusion in Proposed Security Fixes for</div>
+            <div class="paper-title-zh">在提议的安全修复程序中重新发现方法混乱</div>
+            <div class="paper-authors"><strong>作者:</strong> Maximilian von Tschirschnitz (Technical University of Munich), Ludwig Peuckert (Technical University of Munich), Moritz</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/rediscovering-method-confusion-in-proposed-security-fixes-for-bluetooth/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="repurposing neural networks for efficient cryptographic computation 重新利用神经网络以进行有效的加密计算 xin jin (the ohio state university), shiqing ma (university of massachusetts amherst), zhiqiang lin">
+            <div class="paper-number">#162</div>
+            <div class="paper-title-en">Repurposing Neural Networks for Efficient Cryptographic Computation</div>
+            <div class="paper-title-zh">重新利用神经网络以进行有效的加密计算</div>
+            <div class="paper-authors"><strong>作者:</strong> Xin Jin (The Ohio State University), Shiqing Ma (University of Massachusetts Amherst), Zhiqiang Lin</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/repurposing-neural-networks-for-efficient-cryptographic-computation/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="rethinking trust in forge-based git security 重新思考基于forge的git安全性的信任 aditya sirish a yelgundhalli (new york university), patrick zielinski (new york university), reza curtmola">
+            <div class="paper-number">#163</div>
+            <div class="paper-title-en">Rethinking Trust in Forge-Based Git Security</div>
+            <div class="paper-title-zh">重新思考基于Forge的GIT安全性的信任</div>
+            <div class="paper-authors"><strong>作者:</strong> Aditya Sirish A Yelgundhalli (New York University), Patrick Zielinski (New York University), Reza Curtmola</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/rethinking-trust-in-forge-based-git-security/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="retrofitting xom for stripped binaries without embedded data 在没有嵌入数据的情况下为剥离的二进制文件进行翻新xom chenke luo (wuhan university), jiang ming (tulane university), mengfei xie (wuhan university), guojun peng">
+            <div class="paper-number">#164</div>
+            <div class="paper-title-en">Retrofitting XoM for Stripped Binaries without Embedded Data</div>
+            <div class="paper-title-zh">在没有嵌入数据的情况下为剥离的二进制文件进行翻新XOM</div>
+            <div class="paper-authors"><strong>作者:</strong> Chenke Luo (Wuhan University), Jiang Ming (Tulane University), Mengfei Xie (Wuhan University), Guojun Peng</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/retrofitting-xom-for-stripped-binaries-without-embedded-data-relocation/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="revealing the black box of device search engine: 揭示黑匣子的设备搜索引擎： mengying wu (fudan university), geng hong (fudan university), jinsong chen (fudan university), qi liu">
+            <div class="paper-number">#165</div>
+            <div class="paper-title-en">Revealing the Black Box of Device Search Engine:</div>
+            <div class="paper-title-zh">揭示黑匣子的设备搜索引擎：</div>
+            <div class="paper-authors"><strong>作者:</strong> Mengying Wu (Fudan University), Geng Hong (Fudan University), Jinsong Chen (Fudan University), Qi Liu</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/revealing-the-black-box-of-device-search-engine-scanning-assets-strategies-and-ethical-consideration/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="revisiting concept drift in windows malware detection: adaptation windows恶意软件检测中的重新访问概念漂移：适应 adrian shuai li (purdue university), arun iyengar (intelligent data management and analytics, llc), ashish">
+            <div class="paper-number">#166</div>
+            <div class="paper-title-en">Revisiting Concept Drift in Windows Malware Detection: Adaptation</div>
+            <div class="paper-title-zh">Windows恶意软件检测中的重新访问概念漂移：适应</div>
+            <div class="paper-authors"><strong>作者:</strong> Adrian Shuai Li (Purdue University), Arun Iyengar (Intelligent Data Management and Analytics, LLC), Ashish</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/revisiting-concept-drift-in-windows-malware-detection-adaptation-to-real-drifted-malware-with-minimal-samples/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="ring of gyges: accountable anonymous broadcast via secret-shared gyges戒指：通过secret-shared负责的匿名广播 wentao dong (city university of hong kong), peipei jiang (wuhan university; city university of">
+            <div class="paper-number">#167</div>
+            <div class="paper-title-en">Ring of Gyges: Accountable Anonymous Broadcast via Secret-Shared</div>
+            <div class="paper-title-zh">Gyges戒指：通过Secret-Shared负责的匿名广播</div>
+            <div class="paper-authors"><strong>作者:</strong> Wentao Dong (City University of Hong Kong), Peipei Jiang (Wuhan University; City University of</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/ring-of-gyges-accountable-anonymous-broadcast-via-secret-shared-shuffle/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="safesplit: a novel defense against client-side backdoor attacks safesplit：一种针对客户侧后门攻击的新颖防御 phillip rieger (technical university of darmstadt), alessandro pegoraro (technical university of darmstadt), kavita kumari">
+            <div class="paper-number">#168</div>
+            <div class="paper-title-en">SafeSplit: A Novel Defense Against Client-Side Backdoor Attacks</div>
+            <div class="paper-title-zh">SafeSplit：一种针对客户侧后门攻击的新颖防御</div>
+            <div class="paper-authors"><strong>作者:</strong> Phillip Rieger (Technical University of Darmstadt), Alessandro Pegoraro (Technical University of Darmstadt), Kavita Kumari</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/safesplit-a-novel-defense-against-client-side-backdoor-attacks-in-split-learning/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="safety misalignment against large language models 针对大型语言模型的安全错位 yichen gong (tsinghua university), delong ran (tsinghua university), xinlei he (hong kong university of">
+            <div class="paper-number">#169</div>
+            <div class="paper-title-en">Safety Misalignment Against Large Language Models</div>
+            <div class="paper-title-zh">针对大型语言模型的安全错位</div>
+            <div class="paper-authors"><strong>作者:</strong> Yichen Gong (Tsinghua University), Delong Ran (Tsinghua University), Xinlei He (Hong Kong University of</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="scale-mia: a scalable model inversion attack against secure scale-mia：可扩展模型反转攻击针对安全的攻击 shanghao shi (virginia tech), ning wang (university of south florida), yang xiao (university of">
+            <div class="paper-number">#170</div>
+            <div class="paper-title-en">Scale-MIA: A Scalable Model Inversion Attack against Secure</div>
+            <div class="paper-title-zh">Scale-Mia：可扩展模型反转攻击针对安全的攻击</div>
+            <div class="paper-authors"><strong>作者:</strong> Shanghao Shi (Virginia Tech), Ning Wang (University of South Florida), Yang Xiao (University of</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/scale-mia-a-scalable-model-inversion-attack-against-secure-federated-learning-via-latent-space-reconstruction/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="scammagnifier: piercing the veil of fraudulent shopping website scammagnifier：刺穿欺诈购物网站的面纱 marzieh bitaab (arizona state university), alireza karimi (arizona state university), zhuoer lyu (arizona state">
+            <div class="paper-number">#171</div>
+            <div class="paper-title-en">SCAMMAGNIFIER: Piercing the Veil of Fraudulent Shopping Website</div>
+            <div class="paper-title-zh">Scammagnifier：刺穿欺诈购物网站的面纱</div>
+            <div class="paper-authors"><strong>作者:</strong> Marzieh Bitaab (Arizona State University), Alireza Karimi (Arizona State University), Zhuoer Lyu (Arizona State</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/scammagnifier-piercing-the-veil-of-fraudulent-shopping-website-campaigns/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="scopeverif: analyzing the security of androidâ scopeverif：分析android的安全性 zeyu lei (purdue university), gã">
+            <div class="paper-number">#172</div>
+            <div class="paper-title-en">ScopeVerif: Analyzing the Security of Androidâ</div>
+            <div class="paper-title-zh">Scopeverif：分析Android的安全性</div>
+            <div class="paper-authors"><strong>作者:</strong> Zeyu Lei (Purdue University), GÃ</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/scopeverif-analyzing-the-security-of-androids-scoped-storage-via-differential-analysis/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="secure data analytics in apache spark with fine-grained 使用细粒度的apache spark中的数据分析安全 byeongwook kim (seoul national university), jaewon hur (seoul national university), adil ahmad (arizona state">
+            <div class="paper-number">#173</div>
+            <div class="paper-title-en">Secure Data Analytics in Apache Spark with Fine-grained</div>
+            <div class="paper-title-zh">使用细粒度的Apache Spark中的数据分析安全</div>
+            <div class="paper-authors"><strong>作者:</strong> Byeongwook Kim (Seoul National University), Jaewon Hur (Seoul National University), Adil Ahmad (Arizona State</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/secure-data-analytics-in-apache-spark-with-fine-grained-policy-enforcement-and-isolated-execution/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="securing bgp asap: aspa and other post-rov defenses 尽快确保bgp：aspa和其他贸易后防御 justin furuness (university of connecticut), cameron morris (university of connecticut), reynaldo morillo (university of">
+            <div class="paper-number">#174</div>
+            <div class="paper-title-en">Securing BGP ASAP: ASPA and other Post-ROV Defenses</div>
+            <div class="paper-title-zh">尽快确保BGP：ASPA和其他贸易后防御</div>
+            <div class="paper-authors"><strong>作者:</strong> Justin Furuness (University of Connecticut), Cameron Morris (University of Connecticut), Reynaldo Morillo (University of</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="shaft: secure, handy, accurate and fast transformer inference 轴：安全，方便，准确且快速的变压器推断 andes y. l. kei (chinese university of hong kong), sherman s. m. chow (chinese">
+            <div class="paper-number">#175</div>
+            <div class="paper-title-en">SHAFT: Secure, Handy, Accurate and Fast Transformer Inference</div>
+            <div class="paper-title-zh">轴：安全，方便，准确且快速的变压器推断</div>
+            <div class="paper-authors"><strong>作者:</strong> Andes Y. L. Kei (Chinese University of Hong Kong), Sherman S. M. Chow (Chinese</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="sheep&#x27;s clothing, wolf&#x27;s data: detecting server-induced client vulnerabilities 绵羊的衣服，沃尔夫的数据：检测服务器诱导的客户漏洞 fangming gu (institute of information engineering, chinese academy of sciences), qingli guo (institute of">
+            <div class="paper-number">#176</div>
+            <div class="paper-title-en">Sheep&#x27;s Clothing, Wolf&#x27;s Data: Detecting Server-Induced Client Vulnerabilities</div>
+            <div class="paper-title-zh">绵羊的衣服，沃尔夫的数据：检测服务器诱导的客户漏洞</div>
+            <div class="paper-authors"><strong>作者:</strong> Fangming Gu (Institute of Information Engineering, Chinese Academy of Sciences), Qingli Guo (Institute of</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/sheeps-clothing-wolfs-data-detecting-server-induced-client-vulnerabilities-in-windows-remote-ipc/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="siguard: guarding secure inference with post data privacy siguard：使用post data隐私保护安全推理 xinqian wang (rmit university), xiaoning liu (rmit university), shangqi lai (csiro data61), xun yi">
+            <div class="paper-number">#177</div>
+            <div class="paper-title-en">SIGuard: Guarding Secure Inference with Post Data Privacy</div>
+            <div class="paper-title-zh">Siguard：使用Post Data隐私保护安全推理</div>
+            <div class="paper-authors"><strong>作者:</strong> Xinqian Wang (RMIT University), Xiaoning Liu (RMIT University), Shangqi Lai (CSIRO Data61), Xun Yi</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="siniel: distributed privacy-preserving zksnark 辛尼尔：分布式隐私的zksnark yunbo yang (the state key laboratory of blockchain and data security, zhejiang university), yuejia">
+            <div class="paper-number">#178</div>
+            <div class="paper-title-en">Siniel: Distributed Privacy-Preserving zkSNARK</div>
+            <div class="paper-title-zh">辛尼尔：分布式隐私的Zksnark</div>
+            <div class="paper-authors"><strong>作者:</strong> Yunbo Yang (The State Key Laboratory of Blockchain and Data Security, Zhejiang University), Yuejia</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/siniel-distributed-privacy-preserving-zksnark/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="sketchfeature: high-quality per-flow feature extractor towards security-aware data sketchfeature：高质量的每流功能提取器朝向安全性数据 sian kim (ewha womans university), seyed mohammad mehdi mirnajafizadeh (wayne state university), bara kim">
+            <div class="paper-number">#179</div>
+            <div class="paper-title-en">SketchFeature: High-Quality Per-Flow Feature Extractor Towards Security-Aware Data</div>
+            <div class="paper-title-zh">SketchFeature：高质量的每流功能提取器朝向安全性数据</div>
+            <div class="paper-authors"><strong>作者:</strong> Sian Kim (Ewha Womans University), Seyed Mohammad Mehdi Mirnajafizadeh (Wayne State University), Bara Kim</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/sketchfeature-high-quality-per-flow-feature-extractor-towards-security-aware-data-plane/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="skillpov: towards accessible and effective privacy notice for skillpov：朝着可访问有效的隐私通知 jingwen yan (clemson university), song liao (texas tech university), mohammed aldeen (clemson university), luyi">
+            <div class="paper-number">#180</div>
+            <div class="paper-title-en">SKILLPoV: Towards Accessible and Effective Privacy Notice for</div>
+            <div class="paper-title-zh">Skillpov：朝着可访问有效的隐私通知</div>
+            <div class="paper-authors"><strong>作者:</strong> Jingwen Yan (Clemson University), Song Liao (Texas Tech University), Mohammed Aldeen (Clemson University), Luyi</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/skillpov-towards-accessible-and-effective-privacy-notice-for-amazon-alexa-skills/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="songbsab: a dual prevention approach against singing voice 鸣人：一种反对歌声的双重预防方法 guangke chen (pengcheng laboratory), yedi zhang (national university of singapore), fu song (key laboratory">
+            <div class="paper-number">#181</div>
+            <div class="paper-title-en">SongBsAb: A Dual Prevention Approach against Singing Voice</div>
+            <div class="paper-title-zh">鸣人：一种反对歌声的双重预防方法</div>
+            <div class="paper-authors"><strong>作者:</strong> Guangke Chen (Pengcheng Laboratory), Yedi Zhang (National University of Singapore), Fu Song (Key Laboratory</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/songbsab-a-dual-prevention-approach-against-singing-voice-conversion-based-illegal-song-covers/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="spatial-domain wireless jamming with reconfigurable intelligent surfaces 带有可重构智能表面的空间域无线堵塞 philipp mackensen (ruhr university bochum), paul staat (max planck institute for security and privacy)">
+            <div class="paper-number">#182</div>
+            <div class="paper-title-en">Spatial-Domain Wireless Jamming with Reconfigurable Intelligent Surfaces</div>
+            <div class="paper-title-zh">带有可重构智能表面的空间域无线堵塞</div>
+            <div class="paper-authors"><strong>作者:</strong> Philipp Mackensen (Ruhr University Bochum), Paul Staat (Max Planck Institute for Security and Privacy)</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/spatial-domain-wireless-jamming-with-reconfigurable-intelligent-surfaces/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="speak up, iâ 大声说，我 derin cayir (florida international university), reham mohamed aburas (american university of sharjah), riccardo lazzeretti">
+            <div class="paper-number">#183</div>
+            <div class="paper-title-en">Speak Up, Iâ</div>
+            <div class="paper-title-zh">大声说，我</div>
+            <div class="paper-authors"><strong>作者:</strong> Derin Cayir (Florida International University), Reham Mohamed Aburas (American University of Sharjah), Riccardo Lazzeretti</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/speak-up-im-listening-extracting-speech-from-zero-permission-vr-sensors/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="starshields for ios: navigating the security cosmos in 星际ios：导航安全宇宙 jiska classen (hasso plattner institute, university of potsdam), alexander heinrich (tu darmstadt, germany), fabian">
+            <div class="paper-number">#184</div>
+            <div class="paper-title-en">Starshields for iOS: Navigating the Security Cosmos in</div>
+            <div class="paper-title-zh">星际iOS：导航安全宇宙</div>
+            <div class="paper-authors"><strong>作者:</strong> Jiska Classen (Hasso Plattner Institute, University of Potsdam), Alexander Heinrich (TU Darmstadt, Germany), Fabian</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/starshields-for-ios-navigating-the-security-cosmos-in-satellite-communication/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="statically discover cross-entry use-after-free vulnerabilities in the linux linux中的静态发现跨输入无用的漏洞 hang zhang (indiana university bloomington), jangha kim (the affiliated institute of etri, rok), chuhong">
+            <div class="paper-number">#185</div>
+            <div class="paper-title-en">Statically Discover Cross-Entry Use-After-Free Vulnerabilities in the Linux</div>
+            <div class="paper-title-zh">Linux中的静态发现跨输入无用的漏洞</div>
+            <div class="paper-authors"><strong>作者:</strong> Hang Zhang (Indiana University Bloomington), Jangha Kim (The Affiliated Institute of ETRI, ROK), Chuhong</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/statically-discover-cross-entry-use-after-free-vulnerabilities-in-the-linux-kernel/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="the discriminative power of cross-layer rtts in fingerprinting 跨层rtt在指纹上的判别能力 diwen xue (university of michigan), robert stanley (university of michigan), piyush kumar (university of">
+            <div class="paper-number">#186</div>
+            <div class="paper-title-en">The Discriminative Power of Cross-layer RTTs in Fingerprinting</div>
+            <div class="paper-title-zh">跨层RTT在指纹上的判别能力</div>
+            <div class="paper-authors"><strong>作者:</strong> Diwen Xue (University of Michigan), Robert Stanley (University of Michigan), Piyush Kumar (University of</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/the-discriminative-power-of-cross-layer-rtts-in-fingerprinting-proxy-traffic/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="the forking way: when tees meet consensus 分叉的方式：当t恤达成共识时 annika wilde (ruhr university bochum), tim niklas gruel (ruhr university bochum), claudio soriente (nec">
+            <div class="paper-number">#187</div>
+            <div class="paper-title-en">The Forking Way: When TEEs Meet Consensus</div>
+            <div class="paper-title-zh">分叉的方式：当T恤达成共识时</div>
+            <div class="paper-authors"><strong>作者:</strong> Annika Wilde (Ruhr University Bochum), Tim Niklas Gruel (Ruhr University Bochum), Claudio Soriente (NEC</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/the-forking-way-when-tees-meet-consensus/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="the guardians of name street: studying the defensive 名字街的监护人：研究防御 boladji vinny adjibi (georgia tech), athanasios avgetidis (georgia tech), manos antonakakis (georgia tech), michael">
+            <div class="paper-number">#188</div>
+            <div class="paper-title-en">The Guardians of Name Street: Studying the Defensive</div>
+            <div class="paper-title-zh">名字街的监护人：研究防御</div>
+            <div class="paper-authors"><strong>作者:</strong> Boladji Vinny Adjibi (Georgia Tech), Athanasios Avgetidis (Georgia Tech), Manos Antonakakis (Georgia Tech), Michael</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/the-guardians-of-name-street-studying-the-defensive-registration-practices-of-the-fortune-500/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="the kids are all right: investigating the susceptibility 孩子们没事：调查易感性 elijah bouma-sims (carnegie mellon university), lily klucinec (carnegie mellon university), mandy lanyon (carnegie mellon">
+            <div class="paper-number">#189</div>
+            <div class="paper-title-en">The Kids Are All Right: Investigating the Susceptibility</div>
+            <div class="paper-title-zh">孩子们没事：调查易感性</div>
+            <div class="paper-authors"><strong>作者:</strong> Elijah Bouma-Sims (Carnegie Mellon University), Lily Klucinec (Carnegie Mellon University), Mandy Lanyon (Carnegie Mellon</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/the-kids-are-all-right-investigating-the-susceptibility-of-teens-and-adults-to-youtube-giveaway-scams/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="the road to trust: building enclaves within confidential 信任之路：机密内建造飞地 wenhao wang (key laboratory of cyberspace security defense, institute of information engineering, cas), linke">
+            <div class="paper-number">#190</div>
+            <div class="paper-title-en">The Road to Trust: Building Enclaves within Confidential</div>
+            <div class="paper-title-zh">信任之路：机密内建造飞地</div>
+            <div class="paper-authors"><strong>作者:</strong> Wenhao Wang (Key Laboratory of Cyberspace Security Defense, Institute of Information Engineering, CAS), Linke</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="tme-box: scalable in-process isolation through intel tme-mk memory tme-box：可扩展通过intel tme-mk内存隔离 martin unterguggenberger (graz university of technology), lukas lamster (graz university of technology), david schrammel">
+            <div class="paper-number">#191</div>
+            <div class="paper-title-en">TME-Box: Scalable In-Process Isolation through Intel TME-MK Memory</div>
+            <div class="paper-title-zh">TME-box：可扩展通过Intel TME-MK内存隔离</div>
+            <div class="paper-authors"><strong>作者:</strong> Martin Unterguggenberger (Graz University of Technology), Lukas Lamster (Graz University of Technology), David Schrammel</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/tme-box-scalable-in-process-isolation-through-intel-tme-mk-memory-encryption/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="towards understanding unsafe video generation 要了解不安全的视频生成 yan pang (university of virginia), aiping xiong (penn state university), yang zhang (cispa helmholtz">
+            <div class="paper-number">#192</div>
+            <div class="paper-title-en">Towards Understanding Unsafe Video Generation</div>
+            <div class="paper-title-zh">要了解不安全的视频生成</div>
+            <div class="paper-authors"><strong>作者:</strong> Yan Pang (University of Virginia), Aiping Xiong (Penn State University), Yang Zhang (CISPA Helmholtz</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/towards-understanding-unsafe-video-generation/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="translating c to rust: lessons from a user 将c转换为rust：用户的课程 ruishi li (national university of singapore), bo wang (national university of singapore), tianyu li">
+            <div class="paper-number">#193</div>
+            <div class="paper-title-en">Translating C To Rust: Lessons from a User</div>
+            <div class="paper-title-zh">将C转换为Rust：用户的课程</div>
+            <div class="paper-authors"><strong>作者:</strong> Ruishi Li (National University of Singapore), Bo Wang (National University of Singapore), Tianyu Li</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/translating-c-to-rust-lessons-from-a-user-study/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="truman: constructing device behavior models from os drivers 杜鲁门：从os驱动程序构建设备行为模型 zheyu ma (institute for network sciences and cyberspace (insc), tsinghua university; epfl; jcss, tsinghua">
+            <div class="paper-number">#194</div>
+            <div class="paper-title-en">Truman: Constructing Device Behavior Models from OS Drivers</div>
+            <div class="paper-title-zh">杜鲁门：从OS驱动程序构建设备行为模型</div>
+            <div class="paper-authors"><strong>作者:</strong> Zheyu Ma (Institute for Network Sciences and Cyberspace (INSC), Tsinghua University; EPFL; JCSS, Tsinghua</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/truman-constructing-device-behavior-models-from-os-drivers-to-fuzz-virtual-devices/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="try to poison my deep learning data? nowhere 尝试毒害我的深度学习数据？无处 yansong gao (the university of western australia), huaibing peng (nanjing university of science and">
+            <div class="paper-number">#195</div>
+            <div class="paper-title-en">Try to Poison My Deep Learning Data? Nowhere</div>
+            <div class="paper-title-zh">尝试毒害我的深度学习数据？无处</div>
+            <div class="paper-authors"><strong>作者:</strong> Yansong Gao (The University of Western Australia), Huaibing Peng (Nanjing University of Science and</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/try-to-poison-my-deep-learning-data-nowhere-to-hide-your-trajectory-spectrum/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="twinfuzz: differential testing of video hardware acceleration stacks twinfuzz：视频硬件加速堆栈的差分测试 matteo leonelli (cispa helmholtz center for information security), addison crump (cispa helmholtz center for">
+            <div class="paper-number">#196</div>
+            <div class="paper-title-en">TWINFUZZ: Differential Testing of Video Hardware Acceleration Stacks</div>
+            <div class="paper-title-zh">Twinfuzz：视频硬件加速堆栈的差分测试</div>
+            <div class="paper-authors"><strong>作者:</strong> Matteo Leonelli (CISPA Helmholtz Center for Information Security), Addison Crump (CISPA Helmholtz Center for</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/twinfuzz-differential-testing-of-video-hardware-acceleration-stacks/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="tz-datashield: automated data protection for embedded systems via tz-datashield：通过 zelun kong (university of texas at dallas), minkyung park (university of texas at dallas)">
+            <div class="paper-number">#197</div>
+            <div class="paper-title-en">TZ-DATASHIELD: Automated Data Protection for Embedded Systems via</div>
+            <div class="paper-title-zh">TZ-Datashield：通过</div>
+            <div class="paper-authors"><strong>作者:</strong> Zelun Kong (University of Texas at Dallas), Minkyung Park (University of Texas at Dallas)</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/tz-datashield-automated-data-protection-for-embedded-systems-via-data-flow-based-compartmentalization/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="ui-ctx: understanding ui behaviors with code contexts for ui-ctx：使用代码上下文了解ui行为 jiawei li (beihang university &amp; national university of singapore), jiahao liu (national university of">
+            <div class="paper-number">#198</div>
+            <div class="paper-title-en">UI-CTX: Understanding UI Behaviors with Code Contexts for</div>
+            <div class="paper-title-zh">UI-CTX：使用代码上下文了解UI行为</div>
+            <div class="paper-authors"><strong>作者:</strong> Jiawei Li (Beihang University &amp; National University of Singapore), Jiahao Liu (National University of</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/ui-ctx-understanding-ui-behaviors-with-code-contexts-for-mobile-applications/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="uncovering the iceberg from the tip: generating api 从尖端揭开冰山：产生api miaoqian lin (institute of information engineering, chinese academy of sciences, beijing, china; school of">
+            <div class="paper-number">#199</div>
+            <div class="paper-title-en">Uncovering the iceberg from the tip: Generating API</div>
+            <div class="paper-title-zh">从尖端揭开冰山：产生API</div>
+            <div class="paper-authors"><strong>作者:</strong> Miaoqian Lin (Institute of Information Engineering, Chinese Academy of Sciences, Beijing, China; School of</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/uncovering-the-iceberg-from-the-tip-generating-api-specifications-for-bug-detection-via-specification-propagation-analysis/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="unleashing the power of generative model in recovering 释放生成模型恢复的力量 xiangzhe xu (purdue university), zhuo zhang (purdue university), zian su (purdue university), ziyang huang">
+            <div class="paper-number">#200</div>
+            <div class="paper-title-en">Unleashing the Power of Generative Model in Recovering</div>
+            <div class="paper-title-zh">释放生成模型恢复的力量</div>
+            <div class="paper-authors"><strong>作者:</strong> Xiangzhe Xu (Purdue University), Zhuo Zhang (Purdue University), Zian Su (Purdue University), Ziyang Huang</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/unleashing-the-power-of-generative-model-in-recovering-variable-names-from-stripped-binary/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="urvfl: undetectable data reconstruction attack on vertical federated urvfl：无法检测到的数据重建攻击垂直联合 duanyi yao (hong kong university of science and technology), songze li (southeast university), xueluan">
+            <div class="paper-number">#201</div>
+            <div class="paper-title-en">URVFL: Undetectable Data Reconstruction Attack on Vertical Federated</div>
+            <div class="paper-title-zh">URVFL：无法检测到的数据重建攻击垂直联合</div>
+            <div class="paper-authors"><strong>作者:</strong> Duanyi Yao (Hong Kong University of Science and Technology), Songze Li (Southeast University), Xueluan</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/urvfl-undetectable-data-reconstruction-attack-on-vertical-federated-learning/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="voiceradar: voice deepfake detection using micro-frequency and compositional voiceradar：使用微频和构图检测语音深泡沫检测 kavita kumari (technical university of darmstadt), maryam abbasihafshejani (university of texas at san antonio)">
+            <div class="paper-number">#202</div>
+            <div class="paper-title-en">VoiceRadar: Voice Deepfake Detection using Micro-Frequency and Compositional</div>
+            <div class="paper-title-zh">VoicerAdar：使用微频和构图检测语音深泡沫检测</div>
+            <div class="paper-authors"><strong>作者:</strong> Kavita Kumari (Technical University of Darmstadt), Maryam Abbasihafshejani (University of Texas at San Antonio)</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/voiceradar-voice-deepfake-detection-using-micro-frequency-and-compositional-analysis/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="vulnerability, where art thou? an investigation of vulnerability 脆弱性，你在哪里？对脆弱性的调查 daniel klischies (ruhr university bochum), philipp mackensen (ruhr university bochum), veelasha moonsamy (ruhr university">
+            <div class="paper-number">#203</div>
+            <div class="paper-title-en">Vulnerability, Where Art Thou? An Investigation of Vulnerability</div>
+            <div class="paper-title-zh">脆弱性，你在哪里？对脆弱性的调查</div>
+            <div class="paper-authors"><strong>作者:</strong> Daniel Klischies (Ruhr University Bochum), Philipp Mackensen (Ruhr University Bochum), Veelasha Moonsamy (Ruhr University</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/vulnerability-where-art-thou-an-investigation-of-vulnerability-management-in-android-smartphone-chipsets/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="vulshield: protecting vulnerable code before deploying patches 妖ibe：部署补丁前保护脆弱的代码 yuan li (zhongguancun laboratory &amp; tsinghua university), chao zhang (tsinghua university &amp; jcss &amp;">
+            <div class="paper-number">#204</div>
+            <div class="paper-title-en">VulShield: Protecting Vulnerable Code Before Deploying Patches</div>
+            <div class="paper-title-zh">妖ibe：部署补丁前保护脆弱的代码</div>
+            <div class="paper-authors"><strong>作者:</strong> Yuan Li (Zhongguancun Laboratory &amp; Tsinghua University), Chao Zhang (Tsinghua University &amp; JCSS &amp;</div>
+            
+        </div>
+
+        <div class="paper-item" data-search="was this you? investigating the design considerations for 这是你吗？调查设计注意事项 sena sahin (georgia institute of technology), burak sahin (georgia institute of technology), frank li">
+            <div class="paper-number">#205</div>
+            <div class="paper-title-en">Was This You? Investigating the Design Considerations for</div>
+            <div class="paper-title-zh">这是你吗？调查设计注意事项</div>
+            <div class="paper-authors"><strong>作者:</strong> Sena Sahin (Georgia Institute of Technology), Burak Sahin (Georgia Institute of Technology), Frank Li</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/was-this-you-investigating-the-design-considerations-for-suspicious-login-notifications/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="whatâ 什么 chang yue (institute of information engineering, chinese academy of sciences, beijing, china), kai chen">
+            <div class="paper-number">#206</div>
+            <div class="paper-title-en">Whatâ</div>
+            <div class="paper-title-zh">什么</div>
+            <div class="paper-authors"><strong>作者:</strong> Chang Yue (Institute of Information Engineering, Chinese Academy of Sciences, Beijing, China), Kai Chen</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/whats-done-is-not-whats-claimed-detecting-and-interpreting-inconsistencies-in-app-behaviors/" target="_blank">查看详情</a></div>
+        </div>
+
+        <div class="paper-item" data-search="you can rand but you can&#x27;t hide: a 你可以兰特，但你不能隐藏： inon kaplan (independent researcher), ron even (independent researcher), amit klein (the hebrew university of">
+            <div class="paper-number">#207</div>
+            <div class="paper-title-en">You Can Rand but You Can&#x27;t Hide: A</div>
+            <div class="paper-title-zh">你可以兰特，但你不能隐藏：</div>
+            <div class="paper-authors"><strong>作者:</strong> Inon Kaplan (Independent researcher), Ron even (Independent researcher), Amit Klein (The Hebrew University of</div>
+            <div class="paper-url"><a href="https://www.ndss-symposium.org/ndss-paper/you-can-rand-but-you-cant-hide-a-holistic-security-analysis-of-google-fuchsias-and-gvisors-network-stack/" target="_blank">查看详情</a></div>
+        </div>
+
+    </div>
+    
+    <div class="no-results" id="noResults" style="display: none;">
+        没有找到匹配的论文
+    </div>
+    
+    <script>
+        function searchPapers() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const paperList = document.getElementById('paperList');
+            const papers = paperList.getElementsByClassName('paper-item');
+            const noResults = document.getElementById('noResults');
+            
+            let visibleCount = 0;
+            
+            for (let i = 0; i < papers.length; i++) {
+                const searchData = papers[i].getAttribute('data-search');
+                if (searchData.indexOf(filter) > -1) {
+                    papers[i].style.display = '';
+                    visibleCount++;
+                } else {
+                    papers[i].style.display = 'none';
+                }
+            }
+            
+            if (visibleCount === 0 && filter !== '') {
+                noResults.style.display = 'block';
+                paperList.style.display = 'none';
+            } else {
+                noResults.style.display = 'none';
+                paperList.style.display = 'block';
+            }
+        }
+    </script>
+    
+    <footer style="text-align: center; margin-top: 40px; color: #666; font-size: 0.9em;">
+        <p>数据提取时间: 2025-07-17 | 翻译时间: 2025-07-17</p>
+        <p>数据来源: NDSS Symposium 官网</p>
+    </footer>
+</body>
+</html>
