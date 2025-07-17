@@ -7,7 +7,7 @@ import time  # 添加时间模块用于延时
 # --- 配置 ---
 # 包含论文列表的本地 HTML 文件路径
 # 请确保这个路径是正确的
-LOCAL_HTML_FILE = 'c:\\Users\\coperlm\\Downloads\\papers\\NDSS Symposium 2025 Accepted Papers - NDSS Symposium.html'
+LOCAL_HTML_FILE = '.\\NDSS Symposium 2025 Accepted Papers - NDSS Symposium.html'
 
 # 保存提取数据的文件名
 OUTPUT_FILE = 'ndss_papers_2025.json'
@@ -167,7 +167,7 @@ def main():
     all_papers_data = []
 
     # 只处理前10篇论文进行调试
-    paper_urls = paper_urls[:10]
+    # paper_urls = paper_urls[:10]
 
     for i, url in enumerate(paper_urls):
         print(f"正在处理第 {i+1}/{len(paper_urls)} 篇论文")

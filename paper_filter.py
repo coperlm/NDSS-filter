@@ -39,32 +39,47 @@ class PaperFilter:
         
         # 定义关键词权重映射
         self.keyword_weights = {
-            # 密码学相关
-            'encryption': 1.0,
-            'cryptography': 1.0, 
-            'homomorphic': 1.2,
-            'zero knowledge': 1.2,
-            'lattice': 1.1,
-            'privacy': 0.9,
-            'secure': 0.8,
+            # 密码学相关 - 您感兴趣的领域
+            'zero knowledge': 1.5,  # 零知识证明 - 高权重
+            'chameleon hash': 1.5,  # 变色龙哈希 - 高权重
+            'public key': 1.3,      # 公钥密码学
+            'cryptography': 1.2, 
+            'encryption': 1.2,
+            'digital signature': 1.3,  # 数字签名
+            'elliptic curve': 1.2,     # 椭圆曲线密码学
+            'rsa': 1.1,                # RSA算法
+            'bilinear pairing': 1.2,   # 双线性配对
+            'lattice': 1.1,            # 格密码学
+            'homomorphic': 1.0,        # 同态加密
+            'commitment': 1.2,         # 承诺方案
+            'proof system': 1.3,       # 证明系统
+            'cryptographic protocol': 1.2,  # 密码协议
+            'hash function': 1.1,      # 哈希函数
+            'merkle tree': 1.0,        # 默克尔树
+            'privacy': 0.8,            # 隐私相关但权重稍低
+            'secure': 0.7,             # 安全相关但权重较低
             
-            # 机器学习安全
+            # 机器学习安全 - 不感兴趣
             'adversarial': 0.0,
             'neural network': 0.0,
             'deep learning': 0.0,
             'machine learning': 0.0,
             'federated learning': 0.0,
+            'artificial intelligence': 0.0,
             
-            # 系统安全
+            # 系统安全 - 不感兴趣
             'vulnerability': 0.0,
             'attack': 0.0,
             'defense': 0.0,
             'malware': 0.0,
+            'penetration': 0.0,
+            'exploit': 0.0,
             
-            # 区块链（可能不感兴趣的领域）
-            'blockchain': 0.3,
-            'bitcoin': 0.3,
-            'cryptocurrency': 0.3,
+            # 区块链相关 - 中等兴趣（因为涉及密码学）
+            'blockchain': 0.6,
+            'bitcoin': 0.5,
+            'cryptocurrency': 0.5,
+            'smart contract': 0.4,
         }
     
     def load_papers_from_json(self, json_file: str) -> List[Paper]:
@@ -301,21 +316,22 @@ def main():
         return
     
     # 设置默认研究兴趣 - 您可以在这里修改为您感兴趣的领域
-    default_research_interest = "privacy-preserving machine learning and federated learning"
+    default_research_interest = "zero-knowledge proofs, chameleon hash functions, public key cryptography, digital signatures, and cryptographic protocols"
     
     # 可选的研究兴趣列表（仅供参考，程序会使用默认值）
     research_interests = [
-        "homomorphic encryption and secure computation",
-        "privacy-preserving machine learning and federated learning", 
-        "side-channel attacks and countermeasures",
         "zero-knowledge proofs and cryptographic protocols",
-        "malware detection and analysis",
+        "chameleon hash functions and commitment schemes",
+        "public key cryptography and digital signatures", 
+        "elliptic curve cryptography and bilinear pairings",
+        "lattice-based cryptography and post-quantum security",
     ]
     
     # 使用默认研究兴趣
     research_interest = default_research_interest
     print(f"🎯 使用默认研究兴趣: {research_interest}")
     print("💡 如需修改研究兴趣，请编辑代码中的 default_research_interest 变量")
+    print("🔐 当前偏好: 零知识证明、变色龙哈希、公钥密码学相关论文")
     
     try:
         
