@@ -1,0 +1,218 @@
+﻿(function($) {
+
+  $(document).ready(function() {
+
+   $(".no-link > a").attr("href", "javascript:void(0);");
+   $("#menu-main-menu > .nav-item.dropdown").attr("aria-haspopup", "true");
+   $("#menu-main-menu > .nav-item.dropdown > a[href='#']").attr('href', 'javascript:void(0);')
+      $( ".search-toggle > a" ).click(function(event) {
+          event.preventDefault();
+          $( ".search-dropdown" ).slideToggle(500);
+      });
+
+$("ul.dropdown-menu").removeAttr("aria-labelledby");
+
+$('.nav-item.dropdown > .nav-link.toggle').after('<button class="sub-menu-toggle dashicons-before dashicons-arrow-down-alt2" aria-expanded="false" aria-pressed="false"><span class="screen-reader-text">Submenu</span></button>');
+
+$( ".search-box .header-button" ).clone().appendTo( "#menu-main-menu" );
+
+
+    var waitForEl = function(selector, callback) {
+        if ($(selector).length) {
+            callback();
+        } else {
+            setTimeout(function() {
+                waitForEl(selector, callback);
+            }, 100);
+        }
+    };
+    waitForEl(('.menu-toggle'), function() {
+
+    document.querySelector(".menu-toggle").addEventListener("click", function (e) {
+        setTimeout(() => {
+            document.querySelectorAll(".sub-menu-toggle").forEach((toggle) => {
+                toggle.addEventListener("click", function (e2) {
+                    document.querySelector(".hidden-menu-item")
+                        ? document.querySelectorAll(".hidden-menu-item").forEach(function (item) {
+                                        item.classList.remove("hidden-menu-item");
+                                    })
+                                    : document.querySelectorAll("#menu-main-menu > .nav-item").forEach(function (menuItem) {
+                                                            menuItem.querySelector("button") != toggle && menuItem.classList.add("hidden-menu-item");
+                                    });
+                });
+            });
+        }, 500);
+    });
+
+
+        $('.menu-toggle').click(function(){
+            $('body').toggleClass('side-menu-opened');
+            $(this).toggleClass('activated');
+        });
+
+        $('.sub-menu-toggle').click(function(){
+            $(this).toggleClass("selected-btn").next(".dropdown-menu").toggleClass("selected-ul");
+        });
+    });
+
+
+
+
+
+//   $(".symposium-tiles .wp-block-column > p").hover(function(){
+//       $(".symposium-tiles .wp-block-column").removeClass("sy-hover");
+//        $(this).parent().toggleClass("sy-hover");
+//   });
+
+     $(".attend-tile .wp-block-group__inner-container > p").hover(
+     function () {
+         $(this).parent().addClass("attend-tile-hover");
+     }, function () {
+         $(this).parent().removeClass("attend-tile-hover");
+     });
+
+
+
+
+     $(".symposium-tiles .wp-block-column > p").hover(
+     function () {
+         $(this).parent().addClass("symposium-hover");
+     }, function () {
+         $(this).parent().removeClass("symposium-hover");
+     });
+
+
+     $(".rel-paper-in .paper-link-abs").hover(
+     function () {
+         $(this).parent().addClass("rel-paper-in-hover");
+     }, function () {
+         $(this).parent().removeClass("rel-paper-in-hover");
+     });
+
+
+   $(".accepted-papers .wp-block-column > p").hover(
+     function () {
+         $(this).parent().addClass("accepted-hover");
+     }, function () {
+         $(this).parent().removeClass("accepted-hover");
+     });
+
+
+$('.wrap-two h1').html(function (i, html) {
+    return html.replace(/(\w+\s\w+)/, '<span>$1</span><br/>')
+});
+
+$('.wrap-first h1').each(function(){
+    var me = $(this);
+    me.html( me.text().replace(/(^\w+)/,'<span>$1</span>') );
+  });
+
+/*
+
+      $( ".search-toggle a" ).click(function(event) {
+          event.preventDefault();
+          $( ".search-dropdown" ).slideToggle( 500 );
+      });
+
+*/
+
+$(".abstract-div").hide();
+$('.program-button a').click(function (e) {
+  var id = $(this).attr('href');
+  $(id).toggle(100);
+  e.preventDefault();
+});
+
+
+
+    $('.full-slide > .wp-block-group__inner-container').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        dots: true,
+        arrows: false,
+        infinite: false,
+        autoplaySpeed: 9000,
+    });
+
+
+    $('.keynote-slide > .wp-block-group__inner-container').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        dots: true,
+        arrows: false,
+        infinite: false,
+        autoplaySpeed: 9000,
+    });
+
+
+    $('.three-half-1').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        dots: true,
+        arrows: false,
+//    infinite: false,
+        autoplaySpeed: 9000,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+
+    $('.three-home > .wp-block-group__inner-container').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: false,
+        dots: false,
+        arrows: false,
+//    infinite: false,
+        autoplaySpeed: 9000,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    autoplay: true,
+                    arrows: false,
+                    dots: true,
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 539,
+                settings: {
+                    autoplay: true,
+                    arrows: false,
+                    dots: true,
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+
+  });
+
+  	$(function() {
+	  $('.slide-down a[href*=#]:not([href=#])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html,body').animate({
+	          scrollTop: target.offset().top
+	        }, 1000);
+	        return false;
+	      }
+	    }
+	  });
+	});
+})(jQuery);
+

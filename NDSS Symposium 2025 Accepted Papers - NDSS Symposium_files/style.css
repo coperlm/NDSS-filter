@@ -1,0 +1,56 @@
+﻿/* custom overrides */
+/* fonts
+font-family: hind,sans-serif;
+font-weight: 400;
+font-style: normal;
+
+font-family: hind,sans-serif;
+font-weight: 600;
+font-style: normal;
+
+font-family: hind,sans-serif;
+font-weight: 700;
+font-style: normal;
+
+font-family: roboto-slab,serif;
+font-weight: 700;
+font-style: normal;
+*/
+@import "general.css";
+// @import "header.css";
+// @import "menu.css"; 
+// @import "home.css";
+// @import "pages.css";
+// @import "programs.css";
+// @import "footer.css"; 
+
+
+
+
+
+
+/*
+Removed by Henri 25 July 2023
+
+
+/* fixes
+.no-img-mp figure img,
+.no-img-mp figure {
+   margin: 0;
+   padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+Unwanted toolbar at the bottom.
+#wpadminbar {
+    position: fixed !important;
+    bottom: 0 !important;
+    width: 100%;
+    top: auto;
+}
+*/

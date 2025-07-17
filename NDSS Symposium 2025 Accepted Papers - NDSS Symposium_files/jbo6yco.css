@@ -1,0 +1,59 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * hind:
+ *   - http://typekit.com/eulas/00000000000000007735b90f
+ *   - http://typekit.com/eulas/00000000000000007735b911
+ *   - http://typekit.com/eulas/00000000000000007735b913
+ *   - http://typekit.com/eulas/00000000000000007735b915
+ *   - http://typekit.com/eulas/00000000000000007735b918
+ * roboto-slab:
+ *   - http://typekit.com/eulas/00000000000000007735b23b
+ *
+ * © 2009-2025 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2022-09-27 19:02:42 UTC"}*/
+
+@import url("https://p.typekit.net/p.css?s=1&k=jbo6yco&ht=tk&f=28909.40439.40440.40441.40442.40443&a=93001770&app=typekit&e=css");
+
+@font-face {
+font-family:"roboto-slab";
+src:url("https://use.typekit.net/af/084aef/00000000000000007735b23b/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/084aef/00000000000000007735b23b/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/084aef/00000000000000007735b23b/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"hind";
+src:url("https://use.typekit.net/af/9dca67/00000000000000007735b90f/30/l?subset_id=2&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/9dca67/00000000000000007735b90f/30/d?subset_id=2&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/9dca67/00000000000000007735b90f/30/a?subset_id=2&fvd=n3&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:300;font-stretch:normal;
+}
+
+@font-face {
+font-family:"hind";
+src:url("https://use.typekit.net/af/9d791d/00000000000000007735b911/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/9d791d/00000000000000007735b911/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/9d791d/00000000000000007735b911/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"hind";
+src:url("https://use.typekit.net/af/cc738b/00000000000000007735b913/30/l?subset_id=2&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/cc738b/00000000000000007735b913/30/d?subset_id=2&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/cc738b/00000000000000007735b913/30/a?subset_id=2&fvd=n5&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:500;font-stretch:normal;
+}
+
+@font-face {
+font-family:"hind";
+src:url("https://use.typekit.net/af/a87a32/00000000000000007735b915/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff2"),url("https://use.typekit.net/af/a87a32/00000000000000007735b915/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff"),url("https://use.typekit.net/af/a87a32/00000000000000007735b915/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:600;font-stretch:normal;
+}
+
+@font-face {
+font-family:"hind";
+src:url("https://use.typekit.net/af/67f3d7/00000000000000007735b918/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/67f3d7/00000000000000007735b918/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/67f3d7/00000000000000007735b918/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+.tk-roboto-slab { font-family: "roboto-slab",serif; }
+.tk-hind { font-family: "hind",sans-serif; }
