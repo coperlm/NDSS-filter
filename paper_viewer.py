@@ -45,34 +45,77 @@ class PaperViewer:
         # 生成论文卡片
         paper_cards = ""
         for i, paper in enumerate(self.papers, 1):
+            title = paper.get('title', '未知标题')
+            authors = paper.get('authors', '未知作者')
+            
             # 处理摘要，如果太长则截断
             abstract = paper.get('abstract', '暂无摘要')
             if len(abstract) > 500:
                 abstract = abstract[:500] + "..."
             
+            # 获取各种分数
+            similarity_score = paper.get('similarity_score', 0)
+            rule_score = paper.get('rule_score', 0)
+            final_score = paper.get('final_score', 0)
+            
+            # 计算进度条百分比（转换为0-100范围）
+            similarity_percent = min(similarity_score * 100, 100)
+            rule_percent = min(rule_score * 10, 100)  # rule_score通常在0-10范围
+            final_percent = min(final_score * 100, 100)
+            
             paper_card = f"""
-            <div class="paper-card">
+            <div class="paper-card" data-search="{title.lower()} {authors.lower()} {abstract.lower()}">
                 <div class="paper-rank">#{i}</div>
-                <div class="paper-title">{paper.get('title', '未知标题')}</div>
-                <div class="paper-authors">👥 {paper.get('authors', '未知作者')}</div>
+                <div class="paper-title">{title}</div>
+                <div class="paper-authors"><strong>👥 作者:</strong> {authors}</div>
                 
                 <div class="scores">
                     <div class="score-item">
                         <span class="score-label">语义相似度</span>
-                        <span class="score-value">{paper.get('similarity_score', 0):.4f}</span>
+                        <span class="score-value">{similarity_score:.4f}</span>
                     </div>
                     <div class="score-item">
                         <span class="score-label">规则分数</span>
-                        <span class="score-value">{paper.get('rule_score', 0):.2f}</span>
+                        <span class="score-value">{rule_score:.2f}</span>
                     </div>
                     <div class="score-item">
                         <span class="score-label">综合分数</span>
-                        <span class="score-value">{paper.get('final_score', 0):.4f}</span>
+                        <span class="score-value">{final_score:.4f}</span>
+                    </div>
+                </div>
+                
+                <div class="progress-container">
+                    <div class="progress-label">
+                        <span>🎯 语义匹配度</span>
+                        <span>{similarity_percent:.1f}%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: {similarity_percent}%"></div>
+                    </div>
+                </div>
+                
+                <div class="progress-container">
+                    <div class="progress-label">
+                        <span>⚡ 规则匹配度</span>
+                        <span>{rule_percent:.1f}%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: {rule_percent}%"></div>
+                    </div>
+                </div>
+                
+                <div class="progress-container">
+                    <div class="progress-label">
+                        <span>🏆 综合匹配度</span>
+                        <span>{final_percent:.1f}%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: {final_percent}%"></div>
                     </div>
                 </div>
                 
                 <div class="paper-abstract">
-                    📝 <strong>摘要：</strong>{abstract}
+                    <strong>📝 摘要：</strong>{abstract}
                 </div>
                 
                 <a href="{paper.get('url', '#')}" class="paper-link" target="_blank">
@@ -93,6 +136,7 @@ class PaperViewer:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🎯 NDSS 2025 论文筛选结果</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -101,201 +145,360 @@ class PaperViewer:
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #1a202c;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            padding: 20px;
+            font-size: 16px;
         }
         
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            overflow: hidden;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
         
         .header {
-            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
             color: white;
-            padding: 30px;
+            padding: 40px 30px;
+            border-radius: 16px;
             text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(79, 70, 229, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+            pointer-events: none;
         }
         
         .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin: 0;
+            font-size: 3.2em;
+            font-weight: 700;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
         }
         
         .header .subtitle {
-            font-size: 1.2em;
-            opacity: 0.9;
+            font-size: 1.5em;
+            opacity: 0.95;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
         }
         
         .stats {
-            background: #f8f9fa;
-            padding: 20px;
-            display: flex;
-            justify-content: space-around;
-            border-bottom: 1px solid #e9ecef;
-        }
-        
-        .stat-item {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
             text-align: center;
         }
         
-        .stat-number {
-            font-size: 2em;
-            font-weight: bold;
-            color: #3498db;
-        }
-        
-        .stat-label {
-            color: #666;
-            font-size: 0.9em;
-        }
-        
-        .paper-list {
-            padding: 30px;
-        }
-        
-        .paper-card {
-            background: white;
-            border: 1px solid #e9ecef;
-            border-radius: 10px;
-            margin-bottom: 25px;
-            padding: 25px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .stat-item {
             position: relative;
         }
         
-        .paper-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        .stat-number {
+            font-size: 2.8em;
+            font-weight: 700;
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
         }
         
-        .paper-rank {
-            position: absolute;
-            top: -10px;
-            left: 20px;
-            background: linear-gradient(135deg, #ff6b6b, #ee5a52);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 0.9em;
-        }
-        
-        .paper-title {
-            font-size: 1.4em;
-            font-weight: bold;
-            color: #2c3e50;
-            margin: 15px 0 10px 0;
-            line-height: 1.3;
-        }
-        
-        .paper-authors {
-            color: #666;
-            margin-bottom: 15px;
-            font-style: italic;
-        }
-        
-        .scores {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
-        }
-        
-        .score-item {
-            background: #f8f9fa;
-            padding: 8px 12px;
-            border-radius: 6px;
-            border-left: 4px solid #3498db;
-        }
-        
-        .score-label {
-            font-size: 0.8em;
-            color: #666;
-            display: block;
-        }
-        
-        .score-value {
-            font-weight: bold;
-            color: #2c3e50;
+        .stat-label {
+            color: #374151;
             font-size: 1.1em;
-        }
-        
-        .paper-abstract {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 6px;
-            margin: 15px 0;
-            line-height: 1.7;
-            color: #444;
-        }
-        
-        .paper-link {
-            display: inline-block;
-            background: linear-gradient(135deg, #3498db, #2980b9);
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-        
-        .paper-link:hover {
-            background: linear-gradient(135deg, #2980b9, #21618c);
-            transform: translateY(-1px);
-            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         
         .search-box {
-            margin: 20px 0;
-            padding: 0 30px;
+            background: white;
+            padding: 25px;
+            border-radius: 16px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+            position: relative;
         }
         
         .search-input {
             width: 100%;
-            padding: 12px 20px;
-            border: 2px solid #e9ecef;
-            border-radius: 25px;
-            font-size: 16px;
+            padding: 18px 22px 18px 55px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 400;
             outline: none;
-            transition: border-color 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background-color: #f8fafc;
+            color: #1f2937;
         }
         
         .search-input:focus {
-            border-color: #3498db;
+            border-color: #4f46e5;
+            background-color: white;
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 42px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #374151;
+            font-size: 20px;
+        }
+        
+        .paper-list {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+        }
+        
+        .paper-card {
+            padding: 30px;
+            border-bottom: 1px solid #f1f5f9;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+        
+        .paper-card:hover {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            transform: translateY(-2px);
+        }
+        
+        .paper-card:last-child {
+            border-bottom: none;
+        }
+        
+        .paper-rank {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 16px rgba(79, 70, 229, 0.3);
+        }
+        
+        .paper-title {
+            font-size: 1.6em;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 15px;
+            line-height: 1.4;
+            letter-spacing: -0.01em;
+        }
+        
+        .paper-authors {
+            color: #374151;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+        
+        .scores {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .score-item {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .score-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .score-label {
+            font-size: 0.95em;
+            color: #374151;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .score-value {
+            font-weight: 700;
+            color: #111827;
+            font-size: 1.4em;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .progress-container {
+            margin: 20px 0;
+            padding: 0;
+        }
+        
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 1em;
+            font-weight: 600;
+            color: #374151;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background-color: #e5e7eb;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4f46e5 0%, #7c3aed 100%);
+            border-radius: 5px;
+            transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+        
+        .progress-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+            animation: shimmer 2s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+        
+        .paper-abstract {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            padding: 22px;
+            border-radius: 12px;
+            margin: 20px 0;
+            line-height: 1.8;
+            color: #374151;
+            border-left: 4px solid #4f46e5;
+            font-size: 1.05em;
+        }
+        
+        .paper-link {
+            color: #4f46e5;
+            text-decoration: none;
+            font-size: 1.05em;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 18px;
+            padding: 14px 24px;
+            border: 2px solid #4f46e5;
+            border-radius: 8px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .paper-link:hover {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(79, 70, 229, 0.3);
+        }
+        
+        .no-results {
+            text-align: center;
+            color: #374151;
+            padding: 60px 20px;
+            font-style: italic;
+            font-size: 1.2em;
         }
         
         @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            .container {
+                padding: 20px;
+                border-radius: 16px;
+            }
+            
             .header h1 {
-                font-size: 2em;
+                font-size: 2.5em;
             }
             
             .stats {
-                flex-direction: column;
-                gap: 15px;
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 25px;
             }
             
             .scores {
-                flex-direction: column;
-            }
-            
-            .paper-list {
-                padding: 20px;
+                grid-template-columns: 1fr;
+                gap: 15px;
             }
             
             .paper-card {
-                padding: 20px;
+                padding: 25px 20px;
+            }
+            
+            .search-input {
+                padding: 16px 20px 16px 50px;
+                font-size: 16px;
+            }
+            
+            .search-icon {
+                left: 38px;
             }
         }
     </style>
@@ -304,60 +507,92 @@ class PaperViewer:
     <div class="container">
         <div class="header">
             <h1>🎯 NDSS 2025 论文筛选结果</h1>
-            <div class="subtitle">基于AI语义分析的智能论文推荐系统</div>
+            <div class="subtitle">基于密码学偏好的智能论文推荐系统</div>
         </div>
-        
-        <div class="stats">
-            <div class="stat-item">
-                <div class="stat-number">""" + str(total_papers) + """</div>
-                <div class="stat-label">筛选论文数</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">""" + f"{avg_similarity:.3f}" + """</div>
-                <div class="stat-label">平均相似度</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">""" + f"{max_score:.3f}" + """</div>
-                <div class="stat-label">最高综合分数</div>
-            </div>
+    
+    <div class="stats">
+        <div class="stat-item">
+            <div class="stat-number">""" + str(total_papers) + """</div>
+            <div class="stat-label">筛选论文数</div>
         </div>
-        
-        <div class="search-box">
-            <input type="text" class="search-input" placeholder="🔍 搜索论文标题、作者或关键词..." onkeyup="filterPapers()">
+        <div class="stat-item">
+            <div class="stat-number">""" + f"{avg_similarity:.3f}" + """</div>
+            <div class="stat-label">平均相似度</div>
         </div>
-        
-        <div class="paper-list">
-            """ + paper_cards + """
+        <div class="stat-item">
+            <div class="stat-number">""" + f"{max_score:.3f}" + """</div>
+            <div class="stat-label">最高综合分数</div>
         </div>
+    </div>
+    
+    <div class="search-box">
+        <div class="search-icon">🔍</div>
+        <input type="text" class="search-input" placeholder="搜索论文标题、作者或关键词..." onkeyup="filterPapers()">
+    </div>
+    
+    <div class="paper-list" id="paperList">
+        """ + paper_cards + """
+    </div>
+    
+    <div class="no-results" id="noResults" style="display: none;">
+        <div style="font-size: 3em; margin-bottom: 20px;">📭</div>
+        <div>没有找到匹配的论文</div>
+    </div>
+    
     </div>
     
     <script>
         function filterPapers() {
             const input = document.querySelector('.search-input');
             const filter = input.value.toLowerCase();
-            const cards = document.querySelectorAll('.paper-card');
+            const paperList = document.getElementById('paperList');
+            const papers = paperList.getElementsByClassName('paper-card');
+            const noResults = document.getElementById('noResults');
             
-            cards.forEach(card => {
-                const title = card.querySelector('.paper-title').textContent.toLowerCase();
-                const authors = card.querySelector('.paper-authors').textContent.toLowerCase();
-                const abstract = card.querySelector('.paper-abstract').textContent.toLowerCase();
-                
-                if (title.includes(filter) || authors.includes(filter) || abstract.includes(filter)) {
-                    card.style.display = 'block';
+            let visibleCount = 0;
+            
+            for (let i = 0; i < papers.length; i++) {
+                const searchData = papers[i].getAttribute('data-search');
+                if (searchData.indexOf(filter) > -1) {
+                    papers[i].style.display = '';
+                    visibleCount++;
                 } else {
-                    card.style.display = 'none';
+                    papers[i].style.display = 'none';
                 }
-            });
+            }
+            
+            if (visibleCount === 0 && filter !== '') {
+                noResults.style.display = 'block';
+                paperList.style.display = 'none';
+            } else {
+                noResults.style.display = 'none';
+                paperList.style.display = 'block';
+            }
         }
         
-        // 添加复制链接功能
+        // 添加论文链接点击事件
         document.querySelectorAll('.paper-link').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 window.open(this.href, '_blank');
             });
         });
+        
+        // 添加进度条动画
+        window.addEventListener('load', function() {
+            const progressBars = document.querySelectorAll('.progress-fill');
+            progressBars.forEach((bar, index) => {
+                setTimeout(() => {
+                    bar.style.width = bar.style.width;
+                }, index * 100);
+            });
+        });
     </script>
+    
+    <footer style="text-align: center; margin-top: 40px; padding: 30px; background: rgba(255,255,255,0.8); border-radius: 16px; backdrop-filter: blur(10px);">
+        <p style="color: #374151; font-size: 1.05em; margin-bottom: 10px; font-weight: 500;">🔐 筛选偏好: 零知识证明、变色龙哈希、公钥密码学相关论文</p>
+        <p style="color: #374151; font-size: 1em; font-weight: 500;">数据来源: NDSS Symposium 2025 官网</p>
+    </footer>
 </body>
 </html>"""
         
@@ -375,7 +610,7 @@ class PaperViewer:
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+            background-color: #f5f5f5;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -387,9 +622,9 @@ class PaperViewer:
         .error-container {
             background: white;
             padding: 50px;
-            border-radius: 15px;
+            border-radius: 10px;
             text-align: center;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             max-width: 500px;
         }
         
@@ -411,11 +646,11 @@ class PaperViewer:
         }
         
         .retry-button {
-            background: linear-gradient(135deg, #3498db, #2980b9);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 12px 30px;
             border: none;
-            border-radius: 25px;
+            border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -423,7 +658,7 @@ class PaperViewer:
         
         .retry-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+            box-shadow: 0 4px 8px rgba(102, 126, 234, 0.4);
         }
     </style>
 </head>
@@ -504,7 +739,7 @@ class PaperViewer:
                     time.sleep(1)
             except KeyboardInterrupt:
                 print("\n\n👋 服务器已停止")
-                server.shutdown()
+                pass
                 
         except OSError as e:
             if "Address already in use" in str(e):

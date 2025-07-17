@@ -339,7 +339,7 @@ def main():
         top_papers = filter_system.filter_and_rank(
             research_interest=research_interest,
             papers=papers,
-            top_k=10,  # 返回前10篇
+            top_k=100,  # 返回前10篇
             semantic_weight=0.7  # 语义相似度权重70%，规则权重30%
         )
         
@@ -347,7 +347,7 @@ def main():
         filter_system.print_results(top_papers)
         
         # 导出结果
-        output_file = f"filtered_papers_{len(top_papers)}.json"
+        output_file = f"filtered_papers.json"
         filter_system.export_results(top_papers, output_file)
         
         print(f"\n✅ 筛选完成! 从 {len(papers)} 篇论文中为您推荐了 {len(top_papers)} 篇最相关的论文。")
