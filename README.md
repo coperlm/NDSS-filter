@@ -196,7 +196,7 @@ MIT License - 详见 LICENSE 文件
 
 ## 👨‍💻 作者
 
-GitHub Copilot - AI驱动的智能编程助手
+~~GitHub Copilot - AI驱动的智能编程助手~~ 别听AI瞎说，明明是[coperlm](https://github.com/coperlm)亲自写的（确信
 
 ---
 
